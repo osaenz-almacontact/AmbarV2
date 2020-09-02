@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AMBARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NombreCargoes">
+          <Key>
+            <PropertyRef Name="idCargo" />
+          </Key>
+          <Property Name="idCargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombrecargo" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Personas">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="primerApellido" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="segundoApellido" Type="nvarchar" MaxLength="300" />
+          <Property Name="nombres" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="cedula" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="fechaDeNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="lugarDeNacimiento" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="sexo" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="EstadoCivil" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="idRh" Type="int" />
+          <Property Name="eps" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="direccionResidencia" Type="nvarchar" MaxLength="200" />
+          <Property Name="barrio" Type="nvarchar" MaxLength="200" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="200" />
+          <Property Name="celular" Type="nvarchar" MaxLength="200" />
+          <Property Name="correo" Type="nvarchar" MaxLength="300" />
+          <Property Name="personaDeEmergencia" Type="nvarchar" MaxLength="300" />
+          <Property Name="telefonoDeEmergencia" Type="nvarchar" MaxLength="300" />
+          <Property Name="fechaIngreso" Type="datetime" />
+          <Property Name="nombreEstado" Type="int" />
+          <Property Name="nombreArea" Type="int" />
+          <Property Name="idCargo" Type="int" />
+          <Property Name="nombreRegion" Type="int" />
+          <Property Name="pais" Type="int" />
+          <Property Name="nombreTipoContrato" Type="int" />
+          <Property Name="nombreTipoCosto" Type="int" />
+          <Property Name="Salario" Type="int" />
+          <Property Name="supervisorOperativo" Type="int" />
+          <Property Name="trabajaFestivos" Type="tinyint" />
+          <Property Name="carneDeSitel" Type="int" />
+          <Property Name="parkEdificio" Type="tinyint" />
+          <Property Name="marcaCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="colorCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="placaCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="NoParkPin" Type="int" />
+          <Property Name="fotoURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="fechaRetiro" Type="datetime" />
+          <Property Name="razonRetiro" Type="int" />
+          <Property Name="dateLastUpdate" Type="datetime" />
+          <Property Name="actualizado" Type="nvarchar" MaxLength="100" />
+          <Property Name="numeroEmpleado" Type="int" />
+          <Property Name="emailCorporativo" Type="nvarchar" MaxLength="300" />
+          <Property Name="puestoNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="extFisica" Type="int" />
+          <Property Name="tipoAccesoAmbar" Type="int" />
+          <Property Name="username" Type="nvarchar" MaxLength="150" />
+          <Property Name="password" Type="nvarchar" MaxLength="50" />
+          <Property Name="subBu" Type="int" />
+          <Property Name="idPosting" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rhs">
+          <Key>
+            <PropertyRef Name="idRh" />
+          </Key>
+          <Property Name="idRh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombreRh" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo">
+          <End Role="NombreCargoes" Type="Self.NombreCargoes" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NombreCargoes">
+              <PropertyRef Name="idCargo" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Rhs_idRh">
+          <End Role="Rhs" Type="Self.Rhs" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rhs">
+              <PropertyRef Name="idRh" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idRh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AMBARModelStoreContainer">
+          <EntitySet Name="NombreCargoes" EntityType="Self.NombreCargoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personas" EntityType="Self.Personas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rhs" EntityType="Self.Rhs" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo" Association="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo">
+            <End Role="NombreCargoes" EntitySet="NombreCargoes" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="Self.FK_dbo_Personas_dbo_Rhs_idRh">
+            <End Role="Rhs" EntitySet="Rhs" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AMBARModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NombreCargoes">
+          <Key>
+            <PropertyRef Name="idCargo" />
+          </Key>
+          <Property Name="idCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombrecargo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo" FromRole="NombreCargoes" ToRole="Personas" />
+        </EntityType>
+        <EntityType Name="Personas">
+          <Key>
+            <PropertyRef Name="PersonaId" />
+          </Key>
+          <Property Name="PersonaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="primerApellido" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="segundoApellido" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="nombres" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cedula" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="fechaDeNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="lugarDeNacimiento" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="sexo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EstadoCivil" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="idRh" Type="Int32" />
+          <Property Name="eps" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="direccionResidencia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="barrio" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="telefono" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="celular" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="correo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="personaDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="telefonoDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="nombreEstado" Type="Byte" />
+          <Property Name="nombreArea" Type="Int32" />
+          <Property Name="idCargo" Type="Int32" />
+          <Property Name="nombreRegion" Type="Int32" />
+          <Property Name="pais" Type="Int32" />
+          <Property Name="nombreTipoContrato" Type="Int32" />
+          <Property Name="nombreTipoCosto" Type="Int32" />
+          <Property Name="Salario" Type="Int32" />
+          <Property Name="supervisorOperativo" Type="Int32" />
+          <Property Name="trabajaFestivos" Type="Byte" />
+          <Property Name="carneDeSitel" Type="Int32" />
+          <Property Name="parkEdificio" Type="Byte" />
+          <Property Name="marcaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="colorCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="placaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NoParkPin" Type="Int32" />
+          <Property Name="fotoURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="fechaRetiro" Type="DateTime" Precision="3" />
+          <Property Name="razonRetiro" Type="Int32" />
+          <Property Name="dateLastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="actualizado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="numeroEmpleado" Type="Int32" />
+          <Property Name="emailCorporativo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="puestoNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="extFisica" Type="Int32" />
+          <Property Name="tipoAccesoAmbar" Type="Int32" />
+          <Property Name="username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="subBu" Type="Int32" />
+          <Property Name="idPosting" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="NombreCargoes" Relationship="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo" FromRole="Personas" ToRole="NombreCargoes" />
+          <NavigationProperty Name="Rhs" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Personas" ToRole="Rhs" />
+        </EntityType>
+        <EntityType Name="Rhs">
+          <Key>
+            <PropertyRef Name="idRh" />
+          </Key>
+          <Property Name="idRh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombreRh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Rhs" ToRole="Personas" />
+        </EntityType>
+        <Association Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo">
+          <End Role="NombreCargoes" Type="Self.NombreCargoes" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NombreCargoes">
+              <PropertyRef Name="idCargo" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Rhs_idRh">
+          <End Role="Rhs" Type="Self.Rhs" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rhs">
+              <PropertyRef Name="idRh" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idRh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AMBAREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NombreCargoes" EntityType="Self.NombreCargoes" />
+          <EntitySet Name="Personas" EntityType="Self.Personas" />
+          <EntitySet Name="Rhs" EntityType="Self.Rhs" />
+          <AssociationSet Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo" Association="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo">
+            <End Role="NombreCargoes" EntitySet="NombreCargoes" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="Self.FK_dbo_Personas_dbo_Rhs_idRh">
+            <End Role="Rhs" EntitySet="Rhs" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AMBARModelStoreContainer" CdmEntityContainer="AMBAREntities">
+          <EntitySetMapping Name="NombreCargoes">
+            <EntityTypeMapping TypeName="AMBARModel.NombreCargoes">
+              <MappingFragment StoreEntitySet="NombreCargoes">
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+                <ScalarProperty Name="nombrecargo" ColumnName="nombrecargo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personas">
+            <EntityTypeMapping TypeName="AMBARModel.Personas">
+              <MappingFragment StoreEntitySet="Personas">
+                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
+                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
+                <ScalarProperty Name="nombres" ColumnName="nombres" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="fechaDeNacimiento" ColumnName="fechaDeNacimiento" />
+                <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="idRh" ColumnName="idRh" />
+                <ScalarProperty Name="eps" ColumnName="eps" />
+                <ScalarProperty Name="direccionResidencia" ColumnName="direccionResidencia" />
+                <ScalarProperty Name="barrio" ColumnName="barrio" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="personaDeEmergencia" ColumnName="personaDeEmergencia" />
+                <ScalarProperty Name="telefonoDeEmergencia" ColumnName="telefonoDeEmergencia" />
+                <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+                <ScalarProperty Name="nombreEstado" ColumnName="nombreEstado" />
+                <ScalarProperty Name="nombreArea" ColumnName="nombreArea" />
+                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
+                <ScalarProperty Name="nombreRegion" ColumnName="nombreRegion" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="nombreTipoContrato" ColumnName="nombreTipoContrato" />
+                <ScalarProperty Name="nombreTipoCosto" ColumnName="nombreTipoCosto" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="supervisorOperativo" ColumnName="supervisorOperativo" />
+                <ScalarProperty Name="trabajaFestivos" ColumnName="trabajaFestivos" />
+                <ScalarProperty Name="carneDeSitel" ColumnName="carneDeSitel" />
+                <ScalarProperty Name="parkEdificio" ColumnName="parkEdificio" />
+                <ScalarProperty Name="marcaCarro" ColumnName="marcaCarro" />
+                <ScalarProperty Name="colorCarro" ColumnName="colorCarro" />
+                <ScalarProperty Name="placaCarro" ColumnName="placaCarro" />
+                <ScalarProperty Name="NoParkPin" ColumnName="NoParkPin" />
+                <ScalarProperty Name="fotoURL" ColumnName="fotoURL" />
+                <ScalarProperty Name="fechaRetiro" ColumnName="fechaRetiro" />
+                <ScalarProperty Name="razonRetiro" ColumnName="razonRetiro" />
+                <ScalarProperty Name="dateLastUpdate" ColumnName="dateLastUpdate" />
+                <ScalarProperty Name="actualizado" ColumnName="actualizado" />
+                <ScalarProperty Name="numeroEmpleado" ColumnName="numeroEmpleado" />
+                <ScalarProperty Name="emailCorporativo" ColumnName="emailCorporativo" />
+                <ScalarProperty Name="puestoNo" ColumnName="puestoNo" />
+                <ScalarProperty Name="extFisica" ColumnName="extFisica" />
+                <ScalarProperty Name="tipoAccesoAmbar" ColumnName="tipoAccesoAmbar" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="subBu" ColumnName="subBu" />
+                <ScalarProperty Name="idPosting" ColumnName="idPosting" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rhs">
+            <EntityTypeMapping TypeName="AMBARModel.Rhs">
+              <MappingFragment StoreEntitySet="Rhs">
+                <ScalarProperty Name="idRh" ColumnName="idRh" />
+                <ScalarProperty Name="nombreRh" ColumnName="nombreRh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

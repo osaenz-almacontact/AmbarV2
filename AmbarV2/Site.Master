@@ -1,0 +1,149 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AmbarV2.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Home Page</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Theme -->
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/Themes/flex-slider.css" rel="stylesheet" />
+    <link href="~/Content/Themes/fontawesome.css" rel="stylesheet" />
+    <link href="~/Content/Themes/owl.css" rel="stylesheet" />
+    <link href="~/Content/Themes/templatemo-style.css" rel="stylesheet" />
+</head>
+<body class="is-preload">
+
+
+    <!-- LOGO HEADER END-->
+    <form runat="server">
+        <div id="wrapper">
+            <div id="main">
+                <div class="inner">
+                    <!-- Header -->
+                    <header id="header">
+                        <div class="logo">
+                            <a href="index.html" style="font-size: 20px">Usuario</a>
+                        </div>
+                    </header>
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <!-- CONTENT-WRAPPER SECTION END-->
+            <!-- Sidebar -->
+            <div id="sidebar">
+
+                <div class="inner">
+
+                    <!-- Search Box -->
+                    <section id="search" class="alt">
+                        <div class="container" style="max-width: 300px;">
+                            <br />
+                            <a href="Default.aspx">
+                                <asp:Image ID="Image1" runat="server" ImageUrl="~/Content/Images/logo.png" BorderStyle="None" />
+                                <br />
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Menu -->
+                    <nav id="menu">
+                        <ul>
+                            <li><a runat="server" href="~/">Dashboard</a></li>
+                            <li><a href="simple_page.html">Nomina</a></li>
+                            <li>
+                                <span class="opener">Empresa</span>
+                                <ul>
+                                    <li><a runat="server" href="Empresa/MisionVision.aspx">Visión y equipo</a></li>
+                                    <li><a runat="server" href="Empresa/Oficinas.aspx">Oficinas</a></li>
+                                    <li><a runat="server" href="Empresa/GrupoAlmaViva.aspx">Grupo AlmavivA</a></li>
+                                    <li><a runat="server" href="Empresa/PresenciaGlobal.aspx">Presencia global</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="opener">Human Resources</span>
+                                <ul>
+                                    <li><a href="#">Brigadistas</a></li>
+                                    <li><a href="#">Entrenamiento</a></li>
+                                    <li><a href="#">Organigrama</a></li>
+                                    <li><a runat="server" href="~/RecursosHumanos/Documentacion/Documentacion.aspx">Documetacion</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="opener">IT</span>
+                                <ul>
+                                    <li><a href="#">¿Como creo un PST?</a></li>
+                                    <li><a href="#">Aplicaciones</a></li>
+                                </ul>
+                            </li>
+                             <li><a href="simple_page.html">Clima y Liderazgo</a></li>
+                             <li>
+                                <span class="opener">COVIT-19</span>
+                                <ul>
+                                    <li><a runat="server" href="~/COVIT/Videos/CovitVideo.aspx">Videos</a></li>
+                                    <li><a runat="server" href="~/COVIT/CovitDocumentos.aspx">Documentación</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!-- Featured Posts -->
+                    <div class="featured-posts">
+                        <div class="heading">
+                            <h2>Featured Posts</h2>
+                        </div>
+                        <div class="owl-carousel owl-theme">
+                            <a href="#">
+                                <div class="featured-item">
+                                    <img src="assets/images/featured_post_01.jpg" alt="featured one">
+                                    <p>Aliquam egestas convallis eros sed gravida. Curabitur consequat sit.</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="featured-item">
+                                    <img src="assets/images/featured_post_01.jpg" alt="featured two">
+                                    <p>Donec a scelerisque massa. Aliquam non iaculis quam. Duis arcu turpis.</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="featured-item">
+                                    <img src="assets/images/featured_post_01.jpg" alt="featured three">
+                                    <p>Suspendisse ac convallis urna, vitae luctus ante. Donec sit amet.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">
+                            Copyright &copy; 2019 Company Name
+                                <br />
+                            Designed by <a rel="nofollow" href="https://www.facebook.com/templatemo">Template Mo</a>
+                        </p>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="/Scripts/jquery/jquery.js"></script>
+    <script src="/Scripts/jquery/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
+
+    <script src="/Scripts/JS/browser.min.js"></script>
+    <script src="/Scripts/JS/breakpoints.min.js"></script>
+    <script src="/Scripts/JS/transition.js"></script>
+    <script src="/Scripts/JS/owl-carousel.js"></script>
+    <script src="/Scripts/JS/custom.js"></script>
+</body>
+</html>
