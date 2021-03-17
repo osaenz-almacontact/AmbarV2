@@ -25,8 +25,14 @@ namespace AmbarV2.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<NombreCargoes> NombreCargoes { get; set; }
+        public virtual DbSet<Areas> Areas { get; set; }
+        public virtual DbSet<Cargos> Cargos { get; set; }
+        public virtual DbSet<Operaciones> Operaciones { get; set; }
+        public virtual DbSet<Perfiles> Perfiles { get; set; }
+        public virtual DbSet<Permisos> Permisos { get; set; }
         public virtual DbSet<Personas> Personas { get; set; }
         public virtual DbSet<Rhs> Rhs { get; set; }
+        public virtual DbSet<Sites> Sites { get; set; }
+        public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

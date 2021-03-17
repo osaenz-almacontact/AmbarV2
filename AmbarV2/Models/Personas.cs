@@ -33,11 +33,10 @@ namespace AmbarV2.Models
         public string personaDeEmergencia { get; set; }
         public string telefonoDeEmergencia { get; set; }
         public Nullable<System.DateTime> fechaIngreso { get; set; }
-        public Nullable<byte> nombreEstado { get; set; }
-        public Nullable<int> nombreArea { get; set; }
-        public Nullable<int> idCargo { get; set; }
-        public Nullable<int> nombreRegion { get; set; }
-        public Nullable<int> pais { get; set; }
+        public Nullable<int> idOperacion { get; set; }
+        public Nullable<int> idArea { get; set; }
+        public Nullable<int> IdCargo { get; set; }
+        public Nullable<int> IdSite { get; set; }
         public Nullable<int> nombreTipoContrato { get; set; }
         public Nullable<int> nombreTipoCosto { get; set; }
         public Nullable<int> Salario { get; set; }
@@ -58,13 +57,15 @@ namespace AmbarV2.Models
         public string emailCorporativo { get; set; }
         public string puestoNo { get; set; }
         public Nullable<int> extFisica { get; set; }
-        public Nullable<int> tipoAccesoAmbar { get; set; }
-        public string username { get; set; }
-        public string password { get; set; }
         public Nullable<int> subBu { get; set; }
         public int idPosting { get; set; }
+        public int idUsuario { get; set; }
     
-        public virtual NombreCargoes NombreCargoes { get; set; }
+        public virtual Areas Areas { get; set; }
+        public virtual Cargos Cargos { get; set; }
+        public virtual Operaciones Operaciones { get; set; }
         public virtual Rhs Rhs { get; set; }
+        public virtual Sites Sites { get; set; }
+        public virtual Usuarios Usuarios { get; set; }
     }
 }

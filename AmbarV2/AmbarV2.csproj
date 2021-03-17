@@ -116,13 +116,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="400.aspx" />
     <Content Include="ClimaYLiderazgo\ClimaYLiderazgo.aspx" />
-    <Content Include="Contact.aspx" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Fonts\flexslider-icon.svg" />
-    <Content Include="Content\Fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Fonts\slick.svg" />
+    <Content Include="Content\css\app.css" />
+    <Content Include="Content\fonts\fa-brands-400.svg" />
+    <Content Include="Content\fonts\fa-regular-400.svg" />
+    <Content Include="Content\fonts\fa-solid-900.svg" />
+    <Content Include="Content\Images\Card\card-danger-red-button.png" />
+    <Content Include="Content\Images\Card\card-info-blue-button.png" />
+    <Content Include="Content\Images\Card\card-success-green-button.png" />
+    <Content Include="Content\Images\Card\card-waring-orange-button.png" />
+    <Content Include="Content\Images\DashboardSCC\Personal1.jpeg" />
+    <Content Include="Content\Images\DashboardSCC\Personal2.jpeg" />
+    <Content Include="Content\Images\DashboardSCC\Personal3.jpg" />
+    <Content Include="Content\Images\DashboardSCC\Personal4.jpg" />
     <Content Include="Content\Images\Empresa\Brasile.jpg" />
     <Content Include="Content\Images\Empresa\Guido-Fabbri_Colombia_500x500.png" />
     <Content Include="Content\Images\Empresa\mondo-b.jpg" />
@@ -133,34 +140,45 @@
     <Content Include="Content\Images\Empresa\sede-contact.jpg" />
     <Content Include="Content\Images\Empresa\sede-tunisy.jpg" />
     <Content Include="Content\Images\Empresa\team-guzman.jpg" />
-    <Content Include="Content\Images\Iconos\ubicacion-azul-.jpg" />
     <Content Include="Content\Images\Empresa\vision-b2.jpg" />
-    <Content Include="Content\Images\Iconos\text.png" />
-    <Content Include="Content\Themes\flex-slider.css" />
-    <Content Include="Content\Themes\fontawesome.css" />
-    <Content Include="Content\Themes\owl.css" />
-    <Content Include="Content\Themes\templatemo-style.css" />
-    <Content Include="Content\Images\DashboardSCC\Personal1.jpeg" />
-    <Content Include="Content\Images\DashboardSCC\Personal2.jpeg" />
-    <Content Include="Content\Images\DashboardSCC\Personal3.jpg" />
-    <Content Include="Content\Images\DashboardSCC\Personal4.jpg" />
     <Content Include="Content\Images\globos.png" />
+    <Content Include="Content\Images\Iconos\text.png" />
+    <Content Include="Content\Images\Iconos\ubicacion-azul-.jpg" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="COVIT\CovitDocumentos.aspx" />
-    <Content Include="COVIT\Videos\CovitVideo.aspx" />
+    <Content Include="Content\img\avatars\avatar-2.jpg" />
+    <Content Include="Content\img\avatars\avatar-3.jpg" />
+    <Content Include="Content\img\avatars\avatar-4.jpg" />
+    <Content Include="Content\img\avatars\avatar-5.jpg" />
+    <Content Include="Content\img\avatars\avatar.jpg" />
+    <Content Include="Content\img\icons\icon-48x48.png" />
+    <Content Include="Content\img\photos\unsplash-1.jpg" />
+    <Content Include="Content\img\photos\unsplash-2.jpg" />
+    <Content Include="Content\img\photos\unsplash-3.jpg" />
+    <Content Include="Content\img\screenshot.png" />
+    <Content Include="Content\src\fonts\fa-brands-400.svg" />
+    <Content Include="Content\src\fonts\fa-regular-400.svg" />
+    <Content Include="Content\src\fonts\fa-solid-900.svg" />
+    <Content Include="Content\src\img\avatars\avatar-2.jpg" />
+    <Content Include="Content\src\img\avatars\avatar-3.jpg" />
+    <Content Include="Content\src\img\avatars\avatar-4.jpg" />
+    <Content Include="Content\src\img\avatars\avatar-5.jpg" />
+    <Content Include="Content\src\img\avatars\avatar.jpg" />
+    <Content Include="Content\src\img\icons\icon-48x48.png" />
+    <Content Include="Content\src\img\photos\unsplash-1.jpg" />
+    <Content Include="Content\src\img\photos\unsplash-2.jpg" />
+    <Content Include="Content\src\img\photos\unsplash-3.jpg" />
+    <Content Include="Content\src\img\screenshot.png" />
+    <Content Include="COVID\CovidDocumentos.aspx" />
+    <Content Include="COVID\Videos\CovidVideo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Empresa\GrupoAlmaViva.aspx" />
     <Content Include="Empresa\MisionVision.aspx" />
     <Content Include="Empresa\PresenciaGlobal.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <EntityDeploy Include="Models\AmbarModelo.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AmbarModelo.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\AmbarModelo.edmx.diagram">
-      <DependentUpon>AmbarModelo.edmx</DependentUpon>
-    </Content>
+    <Content Include="Login\ErrorAutenticacion.aspx" />
+    <Content Include="Login\Login.aspx" />
+    <Content Include="MiPerfil\MiPerfil.aspx" />
     <Content Include="Models\AmbarModelo.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AmbarModelo.edmx</DependentUpon>
@@ -174,19 +192,18 @@
     <Content Include="Novedades\IngresoDeNovedades.aspx" />
     <Content Include="Empresa\Oficinas.aspx" />
     <Content Include="RecursosHumanos\Documentacion\Documentacion.aspx" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery\jquery.js" />
-    <Content Include="Scripts\jquery\jquery.min.js" />
-    <Content Include="Scripts\jquery\jquery.slim.js" />
-    <Content Include="Scripts\jquery\jquery.slim.min.js" />
-    <Content Include="Scripts\JS\breakpoints.min.js" />
-    <Content Include="Scripts\JS\browser.min.js" />
-    <Content Include="Scripts\JS\custom.js" />
-    <Content Include="Scripts\JS\owl-carousel.js" />
-    <Content Include="Scripts\JS\transition.js" />
+    <Content Include="Scripts\js\app.js" />
+    <Content Include="Scripts\src\js\app.js" />
+    <Content Include="Scripts\src\js\modules\bootstrap.js" />
+    <Content Include="Scripts\src\js\modules\chartjs.js" />
+    <Content Include="Scripts\src\js\modules\datetimepicker.js" />
+    <Content Include="Scripts\src\js\modules\feather.js" />
+    <Content Include="Scripts\src\js\modules\moment.js" />
+    <Content Include="Scripts\src\js\modules\sidebar.js" />
+    <Content Include="Scripts\src\js\modules\theme.js" />
+    <Content Include="Scripts\src\js\modules\user-agent.js" />
+    <Content Include="Scripts\src\js\modules\vector-maps.js" />
+    <Content Include="Scripts\src\js\vendor\jquery-jvectormap-world-mill.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -194,6 +211,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="400.aspx.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="400.aspx.designer.cs">
+      <DependentUpon>400.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ClimaYLiderazgo\ClimaYLiderazgo.aspx.cs">
@@ -203,26 +227,19 @@
     <Compile Include="ClimaYLiderazgo\ClimaYLiderazgo.aspx.designer.cs">
       <DependentUpon>ClimaYLiderazgo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="COVID\CovidDocumentos.aspx.cs">
+      <DependentUpon>CovidDocumentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
+    <Compile Include="COVID\CovidDocumentos.aspx.designer.cs">
+      <DependentUpon>CovidDocumentos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="COVIT\CovitDocumentos.aspx.cs">
-      <DependentUpon>CovitDocumentos.aspx</DependentUpon>
+    <Compile Include="COVID\Videos\CovidVideo.aspx.cs">
+      <DependentUpon>CovidVideo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="COVIT\CovitDocumentos.aspx.designer.cs">
-      <DependentUpon>CovitDocumentos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="COVIT\Videos\CovitVideo.aspx.cs">
-      <DependentUpon>CovitVideo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="COVIT\Videos\CovitVideo.aspx.designer.cs">
-      <DependentUpon>CovitVideo.aspx</DependentUpon>
+    <Compile Include="COVID\Videos\CovidVideo.aspx.designer.cs">
+      <DependentUpon>CovidVideo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -255,6 +272,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login\ErrorAutenticacion.aspx.cs">
+      <DependentUpon>ErrorAutenticacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ErrorAutenticacion.aspx.designer.cs">
+      <DependentUpon>ErrorAutenticacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfil\MiPerfil.aspx.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfil\MiPerfil.aspx.designer.cs">
+      <DependentUpon>MiPerfil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AmbarModelo.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -270,7 +308,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AmbarModelo.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\NombreCargoes.cs">
+    <Compile Include="Models\Areas.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cargos.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Operaciones.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Perfiles.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permisos.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Personas.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Rhs.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sites.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuarios.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Novedades\IngresoDeNovedades.aspx.cs">
@@ -294,14 +356,13 @@
     <Compile Include="RecursosHumanos\Documentacion\Documentacion.aspx.designer.cs">
       <DependentUpon>Documentacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Repositorio\AreaContexto.cs" />
+    <Compile Include="Repositorio\CargoContexto.cs" />
+    <Compile Include="Repositorio\LoginContexto.cs" />
+    <Compile Include="Repositorio\OperacionContexto.cs" />
     <Compile Include="Repositorio\PersonaContexto.cs" />
-    <Compile Include="Models\Personas.cs">
-      <DependentUpon>AmbarModelo.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Rhs.cs">
-      <DependentUpon>AmbarModelo.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\SiteContexto.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -326,30 +387,155 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Login\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Fonts\Flaticon.woff" />
-    <Content Include="Content\Fonts\flexslider-icon.eot" />
-    <Content Include="Content\Fonts\flexslider-icon.ttf" />
-    <Content Include="Content\Fonts\flexslider-icon.woff" />
-    <Content Include="Content\Fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\Fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\Fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\Fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\Fonts\FontAwesome.otf" />
-    <Content Include="Content\Fonts\slick.eot" />
-    <Content Include="Content\Fonts\slick.ttf" />
-    <Content Include="Content\Fonts\slick.woff" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
+    <EntityDeploy Include="Models\AmbarModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AmbarModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AmbarModelo.edmx.diagram">
+      <DependentUpon>AmbarModelo.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\src\fonts\fa-brands-400.eot" />
+    <Content Include="Content\src\fonts\fa-brands-400.ttf" />
+    <Content Include="Content\src\fonts\fa-brands-400.woff" />
+    <Content Include="Content\src\fonts\fa-brands-400.woff2" />
+    <Content Include="Content\src\fonts\fa-regular-400.eot" />
+    <Content Include="Content\src\fonts\fa-regular-400.ttf" />
+    <Content Include="Content\src\fonts\fa-regular-400.woff" />
+    <Content Include="Content\src\fonts\fa-regular-400.woff2" />
+    <Content Include="Content\src\fonts\fa-solid-900.eot" />
+    <Content Include="Content\src\fonts\fa-solid-900.ttf" />
+    <Content Include="Content\src\fonts\fa-solid-900.woff" />
+    <Content Include="Content\src\fonts\fa-solid-900.woff2" />
+    <Content Include="Content\src\fonts\Inter-Black.woff" />
+    <Content Include="Content\src\fonts\Inter-Black.woff2" />
+    <Content Include="Content\src\fonts\Inter-BlackItalic.woff" />
+    <Content Include="Content\src\fonts\Inter-BlackItalic.woff2" />
+    <Content Include="Content\src\fonts\Inter-Bold.woff" />
+    <Content Include="Content\src\fonts\Inter-Bold.woff2" />
+    <Content Include="Content\src\fonts\Inter-BoldItalic.woff" />
+    <Content Include="Content\src\fonts\Inter-BoldItalic.woff2" />
+    <Content Include="Content\src\fonts\Inter-ExtraBold.woff" />
+    <Content Include="Content\src\fonts\Inter-ExtraBold.woff2" />
+    <Content Include="Content\src\fonts\Inter-ExtraBoldItalic.woff" />
+    <Content Include="Content\src\fonts\Inter-ExtraBoldItalic.woff2" />
+    <Content Include="Content\src\fonts\Inter-ExtraLight-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-ExtraLight-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-ExtraLightItalic-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-ExtraLightItalic-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-italic.var.woff2" />
+    <Content Include="Content\src\fonts\Inter-Italic.woff" />
+    <Content Include="Content\src\fonts\Inter-Italic.woff2" />
+    <Content Include="Content\src\fonts\Inter-Light-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-Light-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-LightItalic-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-LightItalic-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-Medium.woff" />
+    <Content Include="Content\src\fonts\Inter-Medium.woff2" />
+    <Content Include="Content\src\fonts\Inter-MediumItalic.woff" />
+    <Content Include="Content\src\fonts\Inter-MediumItalic.woff2" />
+    <Content Include="Content\src\fonts\Inter-Regular.woff" />
+    <Content Include="Content\src\fonts\Inter-Regular.woff2" />
+    <Content Include="Content\src\fonts\Inter-SemiBold.woff" />
+    <Content Include="Content\src\fonts\Inter-SemiBold.woff2" />
+    <Content Include="Content\src\fonts\Inter-SemiBoldItalic.woff" />
+    <Content Include="Content\src\fonts\Inter-SemiBoldItalic.woff2" />
+    <Content Include="Content\src\fonts\Inter-Thin-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-Thin-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-ThinItalic-BETA.woff" />
+    <Content Include="Content\src\fonts\Inter-ThinItalic-BETA.woff2" />
+    <Content Include="Content\src\fonts\Inter-upright.var.woff2" />
+    <Content Include="Content\src\fonts\Inter.var.woff2" />
+    <Content Include="Content\src\scss\1-variables\_fonts.scss" />
+    <Content Include="Content\src\scss\1-variables\_variables.scss" />
+    <Content Include="Content\src\scss\2-mixins\_button.scss" />
+    <Content Include="Content\src\scss\2-mixins\_modal.scss" />
+    <Content Include="Content\src\scss\2-mixins\_switch.scss" />
+    <Content Include="Content\src\scss\3-components\_accordion.scss" />
+    <Content Include="Content\src\scss\3-components\_alert.scss" />
+    <Content Include="Content\src\scss\3-components\_avatar.scss" />
+    <Content Include="Content\src\scss\3-components\_buttons.scss" />
+    <Content Include="Content\src\scss\3-components\_card.scss" />
+    <Content Include="Content\src\scss\3-components\_chart.scss" />
+    <Content Include="Content\src\scss\3-components\_content.scss" />
+    <Content Include="Content\src\scss\3-components\_dropdown.scss" />
+    <Content Include="Content\src\scss\3-components\_feather.scss" />
+    <Content Include="Content\src\scss\3-components\_footer.scss" />
+    <Content Include="Content\src\scss\3-components\_forms.scss" />
+    <Content Include="Content\src\scss\3-components\_hamburger.scss" />
+    <Content Include="Content\src\scss\3-components\_list-group.scss" />
+    <Content Include="Content\src\scss\3-components\_main.scss" />
+    <Content Include="Content\src\scss\3-components\_modal.scss" />
+    <Content Include="Content\src\scss\3-components\_navbar.scss" />
+    <Content Include="Content\src\scss\3-components\_progress.scss" />
+    <Content Include="Content\src\scss\3-components\_reboot.scss" />
+    <Content Include="Content\src\scss\3-components\_sidebar.scss" />
+    <Content Include="Content\src\scss\3-components\_sizing.scss" />
+    <Content Include="Content\src\scss\3-components\_tables.scss" />
+    <Content Include="Content\src\scss\3-components\_type.scss" />
+    <Content Include="Content\src\scss\3-components\_wrapper.scss" />
+    <Content Include="Content\src\scss\4-utilities\_background.scss" />
+    <Content Include="Content\src\scss\4-utilities\_borders.scss" />
+    <Content Include="Content\src\scss\4-utilities\_cursors.scss" />
+    <Content Include="Content\src\scss\4-utilities\_overflow.scss" />
+    <Content Include="Content\src\scss\5-vendor\_datetimepicker.scss" />
+    <Content Include="Content\src\scss\5-vendor\_simplebar.scss" />
+    <Content Include="Content\src\scss\app.scss" />
+    <Content Include="Content\fonts\fa-brands-400.eot" />
+    <Content Include="Content\fonts\fa-brands-400.ttf" />
+    <Content Include="Content\fonts\fa-brands-400.woff" />
+    <Content Include="Content\fonts\fa-brands-400.woff2" />
+    <Content Include="Content\fonts\fa-regular-400.eot" />
+    <Content Include="Content\fonts\fa-regular-400.ttf" />
+    <Content Include="Content\fonts\fa-regular-400.woff" />
+    <Content Include="Content\fonts\fa-regular-400.woff2" />
+    <Content Include="Content\fonts\fa-solid-900.eot" />
+    <Content Include="Content\fonts\fa-solid-900.ttf" />
+    <Content Include="Content\fonts\fa-solid-900.woff" />
+    <Content Include="Content\fonts\fa-solid-900.woff2" />
+    <Content Include="Content\fonts\Inter-Black.woff" />
+    <Content Include="Content\fonts\Inter-Black.woff2" />
+    <Content Include="Content\fonts\Inter-BlackItalic.woff" />
+    <Content Include="Content\fonts\Inter-BlackItalic.woff2" />
+    <Content Include="Content\fonts\Inter-Bold.woff" />
+    <Content Include="Content\fonts\Inter-Bold.woff2" />
+    <Content Include="Content\fonts\Inter-BoldItalic.woff" />
+    <Content Include="Content\fonts\Inter-BoldItalic.woff2" />
+    <Content Include="Content\fonts\Inter-ExtraBold.woff" />
+    <Content Include="Content\fonts\Inter-ExtraBold.woff2" />
+    <Content Include="Content\fonts\Inter-ExtraBoldItalic.woff" />
+    <Content Include="Content\fonts\Inter-ExtraBoldItalic.woff2" />
+    <Content Include="Content\fonts\Inter-ExtraLight-BETA.woff" />
+    <Content Include="Content\fonts\Inter-ExtraLight-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-ExtraLightItalic-BETA.woff" />
+    <Content Include="Content\fonts\Inter-ExtraLightItalic-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-italic.var.woff2" />
+    <Content Include="Content\fonts\Inter-Italic.woff" />
+    <Content Include="Content\fonts\Inter-Italic.woff2" />
+    <Content Include="Content\fonts\Inter-Light-BETA.woff" />
+    <Content Include="Content\fonts\Inter-Light-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-LightItalic-BETA.woff" />
+    <Content Include="Content\fonts\Inter-LightItalic-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-Medium.woff" />
+    <Content Include="Content\fonts\Inter-Medium.woff2" />
+    <Content Include="Content\fonts\Inter-MediumItalic.woff" />
+    <Content Include="Content\fonts\Inter-MediumItalic.woff2" />
+    <Content Include="Content\fonts\Inter-Regular.woff" />
+    <Content Include="Content\fonts\Inter-Regular.woff2" />
+    <Content Include="Content\fonts\Inter-SemiBold.woff" />
+    <Content Include="Content\fonts\Inter-SemiBold.woff2" />
+    <Content Include="Content\fonts\Inter-SemiBoldItalic.woff" />
+    <Content Include="Content\fonts\Inter-SemiBoldItalic.woff2" />
+    <Content Include="Content\fonts\Inter-Thin-BETA.woff" />
+    <Content Include="Content\fonts\Inter-Thin-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-ThinItalic-BETA.woff" />
+    <Content Include="Content\fonts\Inter-ThinItalic-BETA.woff2" />
+    <Content Include="Content\fonts\Inter-upright.var.woff2" />
+    <Content Include="Content\fonts\Inter.var.woff2" />
     <None Include="packages.config" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\jquery\jquery.min.map" />
-    <Content Include="Scripts\jquery\jquery.slim.min.map" />
+    <Content Include="Scripts\js\app.js.LICENSE" />
+    <Content Include="Scripts\js\app.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

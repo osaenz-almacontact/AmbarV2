@@ -11,7 +11,7 @@ namespace AmbarV2.Novedades
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TxtNombre.Value= Convert.ToString(Session["Nombres"]);
         }
     }
 }

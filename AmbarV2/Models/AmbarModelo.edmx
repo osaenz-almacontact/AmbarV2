@@ -5,12 +5,49 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="AMBARModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="NombreCargoes">
+        <EntityType Name="Areas">
           <Key>
-            <PropertyRef Name="idCargo" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="idCargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nombrecargo" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="IdOperacion" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="150" />
+          <Property Name="Estado" Type="int" />
+        </EntityType>
+        <EntityType Name="Operaciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Perfiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="FechaCreacion" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Permisos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="PaginaTitulo" Type="varchar" MaxLength="50" />
+          <Property Name="Url" Type="varchar" MaxLength="200" />
+          <Property Name="Categoria" Type="varchar" MaxLength="50" />
+          <Property Name="IdPerfil" Type="int" />
+          <Property Name="Estado" Type="varchar" MaxLength="50" />
+          <Property Name="FechaCreacion" Type="datetime" />
         </EntityType>
         <EntityType Name="Personas">
           <Key>
@@ -35,11 +72,10 @@
           <Property Name="personaDeEmergencia" Type="nvarchar" MaxLength="300" />
           <Property Name="telefonoDeEmergencia" Type="nvarchar" MaxLength="300" />
           <Property Name="fechaIngreso" Type="datetime" />
-          <Property Name="nombreEstado" Type="int" />
-          <Property Name="nombreArea" Type="int" />
-          <Property Name="idCargo" Type="int" />
-          <Property Name="nombreRegion" Type="int" />
-          <Property Name="pais" Type="int" />
+          <Property Name="idOperacion" Type="int" />
+          <Property Name="idArea" Type="int" />
+          <Property Name="IdCargo" Type="int" />
+          <Property Name="IdSite" Type="int" />
           <Property Name="nombreTipoContrato" Type="int" />
           <Property Name="nombreTipoCosto" Type="int" />
           <Property Name="Salario" Type="int" />
@@ -60,11 +96,9 @@
           <Property Name="emailCorporativo" Type="nvarchar" MaxLength="300" />
           <Property Name="puestoNo" Type="nvarchar" MaxLength="20" />
           <Property Name="extFisica" Type="int" />
-          <Property Name="tipoAccesoAmbar" Type="int" />
-          <Property Name="username" Type="nvarchar" MaxLength="150" />
-          <Property Name="password" Type="nvarchar" MaxLength="50" />
           <Property Name="subBu" Type="int" />
           <Property Name="idPosting" Type="int" Nullable="false" />
+          <Property Name="idUsuario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Rhs">
           <Key>
@@ -73,15 +107,58 @@
           <Property Name="idRh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombreRh" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
-        <Association Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo">
-          <End Role="NombreCargoes" Type="Self.NombreCargoes" Multiplicity="0..1" />
+        <EntityType Name="Sites">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Login" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="15" />
+          <Property Name="FechaCreacion" Type="datetime" />
+          <Property Name="FechaActualizacion" Type="datetime" />
+          <Property Name="Estado" Type="int" />
+          <Property Name="IdPerfil" Type="int" />
+        </EntityType>
+        <Association Name="FK_dbo_Personas_dbo_Areas_id">
+          <End Role="Areas" Type="Self.Areas" Multiplicity="0..1" />
           <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="NombreCargoes">
-              <PropertyRef Name="idCargo" />
+            <Principal Role="Areas">
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idCargo" />
+              <PropertyRef Name="idArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Cargos_id">
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Operaciones_id">
+          <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operaciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idOperacion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -97,30 +174,132 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Personas_dbo_Sites_id">
+          <End Role="Sites" Type="Self.Sites" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sites">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdSite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Usuarios_id">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Usuairos_dbo_Perfiles_idRh">
+          <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfiles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="IdPerfil" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="AMBARModelStoreContainer">
-          <EntitySet Name="NombreCargoes" EntityType="Self.NombreCargoes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Perfiles" EntityType="Self.Perfiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personas" EntityType="Self.Personas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rhs" EntityType="Self.Rhs" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo" Association="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo">
-            <End Role="NombreCargoes" EntitySet="NombreCargoes" />
+          <EntitySet Name="Sites" EntityType="Self.Sites" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_Personas_dbo_Areas_id" Association="Self.FK_dbo_Personas_dbo_Areas_id">
+            <End Role="Areas" EntitySet="Areas" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Cargos_id" Association="Self.FK_dbo_Personas_dbo_Cargos_id">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Operaciones_id" Association="Self.FK_dbo_Personas_dbo_Operaciones_id">
+            <End Role="Operaciones" EntitySet="Operaciones" />
             <End Role="Personas" EntitySet="Personas" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="Self.FK_dbo_Personas_dbo_Rhs_idRh">
             <End Role="Rhs" EntitySet="Rhs" />
             <End Role="Personas" EntitySet="Personas" />
           </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Sites_id" Association="Self.FK_dbo_Personas_dbo_Sites_id">
+            <End Role="Sites" EntitySet="Sites" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Usuarios_id" Association="Self.FK_dbo_Personas_dbo_Usuarios_id">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Usuairos_dbo_Perfiles_idRh" Association="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh">
+            <End Role="Perfiles" EntitySet="Perfiles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="AMBARModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="NombreCargoes">
+        <EntityType Name="Areas">
           <Key>
-            <PropertyRef Name="idCargo" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="idCargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombrecargo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo" FromRole="NombreCargoes" ToRole="Personas" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="IdOperacion" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Areas_id" FromRole="Areas" ToRole="Personas" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Cargos_id" FromRole="Cargos" ToRole="Personas" />
+        </EntityType>
+        <EntityType Name="Operaciones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Operaciones" ToRole="Personas" />
+        </EntityType>
+        <EntityType Name="Perfiles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="FechaCreacion" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh" FromRole="Perfiles" ToRole="Usuarios" />
+        </EntityType>
+        <EntityType Name="Permisos">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="PaginaTitulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Url" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IdPerfil" Type="Int32" />
+          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Personas">
           <Key>
@@ -145,11 +324,10 @@
           <Property Name="personaDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="telefonoDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
-          <Property Name="nombreEstado" Type="Byte" />
-          <Property Name="nombreArea" Type="Int32" />
-          <Property Name="idCargo" Type="Int32" />
-          <Property Name="nombreRegion" Type="Int32" />
-          <Property Name="pais" Type="Int32" />
+          <Property Name="idOperacion" Type="Int32" />
+          <Property Name="idArea" Type="Int32" />
+          <Property Name="IdCargo" Type="Int32" />
+          <Property Name="IdSite" Type="Int32" />
           <Property Name="nombreTipoContrato" Type="Int32" />
           <Property Name="nombreTipoCosto" Type="Int32" />
           <Property Name="Salario" Type="Int32" />
@@ -170,13 +348,15 @@
           <Property Name="emailCorporativo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
           <Property Name="puestoNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="extFisica" Type="Int32" />
-          <Property Name="tipoAccesoAmbar" Type="Int32" />
-          <Property Name="username" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="subBu" Type="Int32" />
           <Property Name="idPosting" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="NombreCargoes" Relationship="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo" FromRole="Personas" ToRole="NombreCargoes" />
+          <Property Name="idUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Areas" Relationship="Self.FK_dbo_Personas_dbo_Areas_id" FromRole="Personas" ToRole="Areas" />
+          <NavigationProperty Name="Cargos" Relationship="Self.FK_dbo_Personas_dbo_Cargos_id" FromRole="Personas" ToRole="Cargos" />
+          <NavigationProperty Name="Operaciones" Relationship="Self.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Personas" ToRole="Operaciones" />
           <NavigationProperty Name="Rhs" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Personas" ToRole="Rhs" />
+          <NavigationProperty Name="Sites" Relationship="Self.FK_dbo_Personas_dbo_Sites_id" FromRole="Personas" ToRole="Sites" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Personas" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Rhs">
           <Key>
@@ -186,15 +366,73 @@
           <Property Name="nombreRh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Rhs" ToRole="Personas" />
         </EntityType>
-        <Association Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo">
-          <End Role="NombreCargoes" Type="Self.NombreCargoes" Multiplicity="0..1" />
+        <EntityType Name="Sites">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Sites_id" FromRole="Sites" ToRole="Personas" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
+          <Property Name="FechaActualizacion" Type="DateTime" Precision="3" />
+          <Property Name="Estado" Type="Int32" />
+          <Property Name="IdPerfil" Type="Int32" />
+          <NavigationProperty Name="Perfiles" Relationship="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh" FromRole="Usuarios" ToRole="Perfiles" />
+          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Usuarios" ToRole="Personas" />
+        </EntityType>
+        <Association Name="FK_dbo_Personas_dbo_Areas_id">
+          <End Role="Areas" Type="Self.Areas" Multiplicity="0..1" />
           <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="NombreCargoes">
-              <PropertyRef Name="idCargo" />
+            <Principal Role="Areas">
+              <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idCargo" />
+              <PropertyRef Name="idArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Cargos_id">
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Operaciones_id">
+          <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operaciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idOperacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Usuairos_dbo_Perfiles_idRh">
+          <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Perfiles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="IdPerfil" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -210,16 +448,66 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_dbo_Personas_dbo_Sites_id">
+          <End Role="Sites" Type="Self.Sites" Multiplicity="0..1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sites">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdSite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Usuarios_id">
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
+          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Usuarios">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="idUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="AMBAREntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="NombreCargoes" EntityType="Self.NombreCargoes" />
+          <EntitySet Name="Areas" EntityType="Self.Areas" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" />
+          <EntitySet Name="Operaciones" EntityType="Self.Operaciones" />
+          <EntitySet Name="Perfiles" EntityType="Self.Perfiles" />
+          <EntitySet Name="Permisos" EntityType="Self.Permisos" />
           <EntitySet Name="Personas" EntityType="Self.Personas" />
           <EntitySet Name="Rhs" EntityType="Self.Rhs" />
-          <AssociationSet Name="FK_dbo_Personas_dbo_NombreCargoes_idCargo" Association="Self.FK_dbo_Personas_dbo_NombreCargoes_idCargo">
-            <End Role="NombreCargoes" EntitySet="NombreCargoes" />
+          <EntitySet Name="Sites" EntityType="Self.Sites" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK_dbo_Personas_dbo_Areas_id" Association="Self.FK_dbo_Personas_dbo_Areas_id">
+            <End Role="Areas" EntitySet="Areas" />
             <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Cargos_id" Association="Self.FK_dbo_Personas_dbo_Cargos_id">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Operaciones_id" Association="Self.FK_dbo_Personas_dbo_Operaciones_id">
+            <End Role="Operaciones" EntitySet="Operaciones" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Usuairos_dbo_Perfiles_idRh" Association="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh">
+            <End Role="Perfiles" EntitySet="Perfiles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
           <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="Self.FK_dbo_Personas_dbo_Rhs_idRh">
             <End Role="Rhs" EntitySet="Rhs" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Sites_id" Association="Self.FK_dbo_Personas_dbo_Sites_id">
+            <End Role="Sites" EntitySet="Sites" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Usuarios_id" Association="Self.FK_dbo_Personas_dbo_Usuarios_id">
+            <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Personas" EntitySet="Personas" />
           </AssociationSet>
         </EntityContainer>
@@ -229,11 +517,52 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="AMBARModelStoreContainer" CdmEntityContainer="AMBAREntities">
-          <EntitySetMapping Name="NombreCargoes">
-            <EntityTypeMapping TypeName="AMBARModel.NombreCargoes">
-              <MappingFragment StoreEntitySet="NombreCargoes">
-                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
-                <ScalarProperty Name="nombrecargo" ColumnName="nombrecargo" />
+          <EntitySetMapping Name="Areas">
+            <EntityTypeMapping TypeName="AMBARModel.Areas">
+              <MappingFragment StoreEntitySet="Areas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargos">
+            <EntityTypeMapping TypeName="AMBARModel.Cargos">
+              <MappingFragment StoreEntitySet="Cargos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Operaciones">
+            <EntityTypeMapping TypeName="AMBARModel.Operaciones">
+              <MappingFragment StoreEntitySet="Operaciones">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Perfiles">
+            <EntityTypeMapping TypeName="AMBARModel.Perfiles">
+              <MappingFragment StoreEntitySet="Perfiles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permisos">
+            <EntityTypeMapping TypeName="AMBARModel.Permisos">
+              <MappingFragment StoreEntitySet="Permisos">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PaginaTitulo" ColumnName="PaginaTitulo" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -259,11 +588,10 @@
                 <ScalarProperty Name="personaDeEmergencia" ColumnName="personaDeEmergencia" />
                 <ScalarProperty Name="telefonoDeEmergencia" ColumnName="telefonoDeEmergencia" />
                 <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
-                <ScalarProperty Name="nombreEstado" ColumnName="nombreEstado" />
-                <ScalarProperty Name="nombreArea" ColumnName="nombreArea" />
-                <ScalarProperty Name="idCargo" ColumnName="idCargo" />
-                <ScalarProperty Name="nombreRegion" ColumnName="nombreRegion" />
-                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
+                <ScalarProperty Name="idArea" ColumnName="idArea" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="IdSite" ColumnName="IdSite" />
                 <ScalarProperty Name="nombreTipoContrato" ColumnName="nombreTipoContrato" />
                 <ScalarProperty Name="nombreTipoCosto" ColumnName="nombreTipoCosto" />
                 <ScalarProperty Name="Salario" ColumnName="Salario" />
@@ -284,11 +612,9 @@
                 <ScalarProperty Name="emailCorporativo" ColumnName="emailCorporativo" />
                 <ScalarProperty Name="puestoNo" ColumnName="puestoNo" />
                 <ScalarProperty Name="extFisica" ColumnName="extFisica" />
-                <ScalarProperty Name="tipoAccesoAmbar" ColumnName="tipoAccesoAmbar" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="subBu" ColumnName="subBu" />
                 <ScalarProperty Name="idPosting" ColumnName="idPosting" />
+                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -297,6 +623,27 @@
               <MappingFragment StoreEntitySet="Rhs">
                 <ScalarProperty Name="idRh" ColumnName="idRh" />
                 <ScalarProperty Name="nombreRh" ColumnName="nombreRh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sites">
+            <EntityTypeMapping TypeName="AMBARModel.Sites">
+              <MappingFragment StoreEntitySet="Sites">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="AMBARModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+                <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

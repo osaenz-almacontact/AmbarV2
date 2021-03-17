@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace AmbarV2.ClimaYLiderazgo
 {
@@ -11,7 +7,18 @@ namespace AmbarV2.ClimaYLiderazgo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!this.Page.User.Identity.IsAuthenticated)
+            {
+                FormsAuthentication.RedirectToLoginPage();
+            }
+            else
+            {
+                if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
+                {
+                    FormsAuthentication.RedirectToLoginPage();
+                }
+                //Obtener();
+            }
         }
     }
 }
