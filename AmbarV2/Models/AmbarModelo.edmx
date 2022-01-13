@@ -21,6 +21,38 @@
           <Property Name="Nombre" Type="varchar" MaxLength="150" />
           <Property Name="Estado" Type="int" />
         </EntityType>
+        <EntityType Name="NovedadesUsuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoNovedad" Type="varchar" MaxLength="255" />
+          <Property Name="FechaNovedad" Type="datetime" />
+          <Property Name="FechaFacturado" Type="datetime" />
+          <Property Name="Nombres" Type="varchar" MaxLength="50" />
+          <Property Name="Cedula" Type="varchar" MaxLength="20" />
+          <Property Name="NumeroDias" Type="varchar" MaxLength="5" />
+          <Property Name="FechaInicio" Type="date" />
+          <Property Name="FechaFin" Type="date" />
+          <Property Name="Area" Type="varchar" MaxLength="255" />
+          <Property Name="IdArea" Type="int" />
+          <Property Name="Operacion" Type="varchar" MaxLength="255" />
+          <Property Name="IdOperacion" Type="int" />
+          <Property Name="Cargo" Type="varchar" MaxLength="255" />
+          <Property Name="IdCargo" Type="int" />
+          <Property Name="Concepto" Type="varchar" MaxLength="50" />
+          <Property Name="Jurado" Type="varchar" MaxLength="10" />
+          <Property Name="Horario" Type="varchar" MaxLength="10" />
+          <Property Name="NombreBackup" Type="varchar" MaxLength="50" />
+          <Property Name="Motivo" Type="varchar" MaxLength="300" />
+          <Property Name="Ususario" Type="varchar" MaxLength="30" />
+          <Property Name="IdUsuario" Type="int" />
+          <Property Name="Estado" Type="varchar" MaxLength="10" />
+          <Property Name="Observacion" Type="varchar" MaxLength="100" />
+          <Property Name="HoraInicio" Type="varchar" MaxLength="20" />
+          <Property Name="HoraFin" Type="varchar" MaxLength="20" />
+          <Property Name="IdPersona" Type="int" />
+        </EntityType>
         <EntityType Name="Operaciones">
           <Key>
             <PropertyRef Name="Id" />
@@ -51,54 +83,54 @@
         </EntityType>
         <EntityType Name="Personas">
           <Key>
-            <PropertyRef Name="PersonaId" />
+            <PropertyRef Name="Id" />
           </Key>
-          <Property Name="PersonaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="primerApellido" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="segundoApellido" Type="nvarchar" MaxLength="300" />
-          <Property Name="nombres" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="cedula" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="fechaDeNacimiento" Type="datetime" Nullable="false" />
-          <Property Name="lugarDeNacimiento" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="sexo" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PrimerApellido" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="SegundoApellido" Type="nvarchar" MaxLength="300" />
+          <Property Name="Nombres" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Cedula" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="FechaDeNacimiento" Type="datetime" Nullable="false" />
+          <Property Name="LugarDeNacimiento" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Sexo" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="EstadoCivil" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="idRh" Type="int" />
-          <Property Name="eps" Type="nvarchar" MaxLength="200" Nullable="false" />
-          <Property Name="direccionResidencia" Type="nvarchar" MaxLength="200" />
-          <Property Name="barrio" Type="nvarchar" MaxLength="200" />
-          <Property Name="telefono" Type="nvarchar" MaxLength="200" />
-          <Property Name="celular" Type="nvarchar" MaxLength="200" />
-          <Property Name="correo" Type="nvarchar" MaxLength="300" />
-          <Property Name="personaDeEmergencia" Type="nvarchar" MaxLength="300" />
-          <Property Name="telefonoDeEmergencia" Type="nvarchar" MaxLength="300" />
-          <Property Name="fechaIngreso" Type="datetime" />
-          <Property Name="idOperacion" Type="int" />
-          <Property Name="idArea" Type="int" />
+          <Property Name="IdRh" Type="int" />
+          <Property Name="Eps" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DireccionResidencia" Type="nvarchar" MaxLength="200" />
+          <Property Name="Barrio" Type="nvarchar" MaxLength="200" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="200" />
+          <Property Name="Celular" Type="nvarchar" MaxLength="200" />
+          <Property Name="Correo" Type="nvarchar" MaxLength="300" />
+          <Property Name="PersonaDeEmergencia" Type="nvarchar" MaxLength="300" />
+          <Property Name="TelefonoDeEmergencia" Type="nvarchar" MaxLength="300" />
+          <Property Name="FechaIngreso" Type="datetime" />
+          <Property Name="IdOperacion" Type="int" />
+          <Property Name="IdArea" Type="int" />
           <Property Name="IdCargo" Type="int" />
           <Property Name="IdSite" Type="int" />
-          <Property Name="nombreTipoContrato" Type="int" />
-          <Property Name="nombreTipoCosto" Type="int" />
+          <Property Name="NombreTipoContrato" Type="int" />
+          <Property Name="NombreTipoCosto" Type="int" />
           <Property Name="Salario" Type="int" />
-          <Property Name="supervisorOperativo" Type="int" />
-          <Property Name="trabajaFestivos" Type="tinyint" />
-          <Property Name="carneDeSitel" Type="int" />
-          <Property Name="parkEdificio" Type="tinyint" />
-          <Property Name="marcaCarro" Type="nvarchar" MaxLength="100" />
-          <Property Name="colorCarro" Type="nvarchar" MaxLength="100" />
-          <Property Name="placaCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="SupervisorOperativo" Type="int" />
+          <Property Name="TrabajaFestivos" Type="tinyint" />
+          <Property Name="CarneDeSitel" Type="int" />
+          <Property Name="ParkEdificio" Type="tinyint" />
+          <Property Name="MarcaCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="ColorCarro" Type="nvarchar" MaxLength="100" />
+          <Property Name="PlacaCarro" Type="nvarchar" MaxLength="100" />
           <Property Name="NoParkPin" Type="int" />
-          <Property Name="fotoURL" Type="nvarchar" MaxLength="500" />
-          <Property Name="fechaRetiro" Type="datetime" />
-          <Property Name="razonRetiro" Type="int" />
-          <Property Name="dateLastUpdate" Type="datetime" />
-          <Property Name="actualizado" Type="nvarchar" MaxLength="100" />
-          <Property Name="numeroEmpleado" Type="int" />
-          <Property Name="emailCorporativo" Type="nvarchar" MaxLength="300" />
-          <Property Name="puestoNo" Type="nvarchar" MaxLength="20" />
-          <Property Name="extFisica" Type="int" />
-          <Property Name="subBu" Type="int" />
-          <Property Name="idPosting" Type="int" Nullable="false" />
-          <Property Name="idUsuario" Type="int" Nullable="false" />
+          <Property Name="FotoURL" Type="nvarchar" MaxLength="500" />
+          <Property Name="FechaRetiro" Type="datetime" />
+          <Property Name="RazonRetiro" Type="int" />
+          <Property Name="DateLastUpdate" Type="datetime" />
+          <Property Name="Actualizado" Type="nvarchar" MaxLength="100" />
+          <Property Name="NumeroEmpleado" Type="int" />
+          <Property Name="EmailCorporativo" Type="nvarchar" MaxLength="300" />
+          <Property Name="PuestoNo" Type="nvarchar" MaxLength="20" />
+          <Property Name="ExtFisica" Type="int" />
+          <Property Name="SubBu" Type="int" />
+          <Property Name="IdPosting" Type="int" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Rhs">
           <Key>
@@ -111,7 +143,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TipoNovedades">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Usuarios">
@@ -134,7 +173,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idArea" />
+              <PropertyRef Name="IdArea" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -158,7 +197,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idOperacion" />
+              <PropertyRef Name="IdOperacion" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -170,7 +209,7 @@
               <PropertyRef Name="idRh" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idRh" />
+              <PropertyRef Name="IdRh" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -194,7 +233,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="IdUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -213,12 +252,14 @@
         <EntityContainer Name="AMBARModelStoreContainer">
           <EntitySet Name="Areas" EntityType="Self.Areas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NovedadesUsuarios" EntityType="Self.NovedadesUsuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Perfiles" EntityType="Self.Perfiles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permisos" EntityType="Self.Permisos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Personas" EntityType="Self.Personas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Rhs" EntityType="Self.Rhs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sites" EntityType="Self.Sites" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoNovedades" EntityType="Self.TipoNovedades" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_Personas_dbo_Areas_id" Association="Self.FK_dbo_Personas_dbo_Areas_id">
             <End Role="Areas" EntitySet="Areas" />
@@ -260,7 +301,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="IdOperacion" Type="Int32" />
           <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Areas_id" FromRole="Areas" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Areas_id" FromRole="Areas" ToRole="Personas" />
         </EntityType>
         <EntityType Name="Cargos">
           <Key>
@@ -269,7 +310,7 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="Estado" Type="Int32" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Cargos_id" FromRole="Cargos" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" FromRole="Cargos" ToRole="Personas" />
         </EntityType>
         <EntityType Name="Operaciones">
           <Key>
@@ -277,7 +318,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Operaciones" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Operaciones" ToRole="Personas" />
         </EntityType>
         <EntityType Name="Perfiles">
           <Key>
@@ -301,70 +342,13 @@
           <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FechaCreacion" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityType Name="Personas">
-          <Key>
-            <PropertyRef Name="PersonaId" />
-          </Key>
-          <Property Name="PersonaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="primerApellido" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="segundoApellido" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="nombres" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="cedula" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="fechaDeNacimiento" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="lugarDeNacimiento" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="sexo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="EstadoCivil" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="idRh" Type="Int32" />
-          <Property Name="eps" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="direccionResidencia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="barrio" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="telefono" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="celular" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-          <Property Name="correo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="personaDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="telefonoDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="fechaIngreso" Type="DateTime" Precision="3" />
-          <Property Name="idOperacion" Type="Int32" />
-          <Property Name="idArea" Type="Int32" />
-          <Property Name="IdCargo" Type="Int32" />
-          <Property Name="IdSite" Type="Int32" />
-          <Property Name="nombreTipoContrato" Type="Int32" />
-          <Property Name="nombreTipoCosto" Type="Int32" />
-          <Property Name="Salario" Type="Int32" />
-          <Property Name="supervisorOperativo" Type="Int32" />
-          <Property Name="trabajaFestivos" Type="Byte" />
-          <Property Name="carneDeSitel" Type="Int32" />
-          <Property Name="parkEdificio" Type="Byte" />
-          <Property Name="marcaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="colorCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="placaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="NoParkPin" Type="Int32" />
-          <Property Name="fotoURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="fechaRetiro" Type="DateTime" Precision="3" />
-          <Property Name="razonRetiro" Type="Int32" />
-          <Property Name="dateLastUpdate" Type="DateTime" Precision="3" />
-          <Property Name="actualizado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="numeroEmpleado" Type="Int32" />
-          <Property Name="emailCorporativo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="puestoNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-          <Property Name="extFisica" Type="Int32" />
-          <Property Name="subBu" Type="Int32" />
-          <Property Name="idPosting" Type="Int32" Nullable="false" />
-          <Property Name="idUsuario" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Areas" Relationship="Self.FK_dbo_Personas_dbo_Areas_id" FromRole="Personas" ToRole="Areas" />
-          <NavigationProperty Name="Cargos" Relationship="Self.FK_dbo_Personas_dbo_Cargos_id" FromRole="Personas" ToRole="Cargos" />
-          <NavigationProperty Name="Operaciones" Relationship="Self.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Personas" ToRole="Operaciones" />
-          <NavigationProperty Name="Rhs" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Personas" ToRole="Rhs" />
-          <NavigationProperty Name="Sites" Relationship="Self.FK_dbo_Personas_dbo_Sites_id" FromRole="Personas" ToRole="Sites" />
-          <NavigationProperty Name="Usuarios" Relationship="Self.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Personas" ToRole="Usuarios" />
-        </EntityType>
         <EntityType Name="Rhs">
           <Key>
             <PropertyRef Name="idRh" />
           </Key>
           <Property Name="idRh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombreRh" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Rhs" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Rhs" ToRole="Personas" />
         </EntityType>
         <EntityType Name="Sites">
           <Key>
@@ -372,7 +356,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Sites_id" FromRole="Sites" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Sites_id" FromRole="Sites" ToRole="Personas" />
         </EntityType>
         <EntityType Name="Usuarios">
           <Key>
@@ -386,44 +370,8 @@
           <Property Name="Estado" Type="Int32" />
           <Property Name="IdPerfil" Type="Int32" />
           <NavigationProperty Name="Perfiles" Relationship="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh" FromRole="Usuarios" ToRole="Perfiles" />
-          <NavigationProperty Name="Personas" Relationship="Self.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Usuarios" ToRole="Personas" />
+          <NavigationProperty Name="Personas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Usuarios" ToRole="Personas" />
         </EntityType>
-        <Association Name="FK_dbo_Personas_dbo_Areas_id">
-          <End Role="Areas" Type="Self.Areas" Multiplicity="0..1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Areas">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Personas">
-              <PropertyRef Name="idArea" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Personas_dbo_Cargos_id">
-          <End Role="Cargos" Type="Self.Cargos" Multiplicity="0..1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cargos">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Personas">
-              <PropertyRef Name="IdCargo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_dbo_Personas_dbo_Operaciones_id">
-          <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="0..1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Operaciones">
-              <PropertyRef Name="Id" />
-            </Principal>
-            <Dependent Role="Personas">
-              <PropertyRef Name="idOperacion" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_dbo_Usuairos_dbo_Perfiles_idRh">
           <End Role="Perfiles" Type="Self.Perfiles" Multiplicity="0..1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -436,21 +384,162 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="AMBAREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Areas" EntityType="Self.Areas" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" />
+          <EntitySet Name="Operaciones" EntityType="Self.Operaciones" />
+          <EntitySet Name="Perfiles" EntityType="Self.Perfiles" />
+          <EntitySet Name="Permisos" EntityType="Self.Permisos" />
+          <EntitySet Name="Rhs" EntityType="Self.Rhs" />
+          <EntitySet Name="Sites" EntityType="Self.Sites" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
+          <AssociationSet Name="FK_dbo_Usuairos_dbo_Perfiles_idRh" Association="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh">
+            <End Role="Perfiles" EntitySet="Perfiles" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
+          <EntitySet Name="TipoNovedades" EntityType="AMBARModel.TipoNovedades" />
+          <EntitySet Name="Personas" EntityType="AMBARModel.Personas" />
+          <AssociationSet Name="FK_dbo_Personas_dbo_Areas_id" Association="AMBARModel.FK_dbo_Personas_dbo_Areas_id">
+            <End Role="Areas" EntitySet="Areas" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Cargos_id" Association="AMBARModel.FK_dbo_Personas_dbo_Cargos_id">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Operaciones_id" Association="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id">
+            <End Role="Operaciones" EntitySet="Operaciones" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh">
+            <End Role="Rhs" EntitySet="Rhs" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Sites_id" Association="AMBARModel.FK_dbo_Personas_dbo_Sites_id">
+            <End Role="Sites" EntitySet="Sites" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_Personas_dbo_Usuarios_id" Association="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id">
+            <End Role="Usuarios" EntitySet="Usuarios" />
+            <End Role="Personas" EntitySet="Personas" />
+          </AssociationSet>
+          <EntitySet Name="NovedadesUsuarios" EntityType="AMBARModel.NovedadesUsuarios" />
+        </EntityContainer>
+        <EntityType Name="TipoNovedades">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Personas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PrimerApellido" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="SegundoApellido" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Nombres" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Cedula" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FechaDeNacimiento" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LugarDeNacimiento" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Sexo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoCivil" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IdRh" Type="Int32" />
+          <Property Name="Eps" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DireccionResidencia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Barrio" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Celular" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Correo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PersonaDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="TelefonoDeEmergencia" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FechaIngreso" Type="DateTime" Precision="3" />
+          <Property Name="IdOperacion" Type="Int32" />
+          <Property Name="IdArea" Type="Int32" />
+          <Property Name="IdCargo" Type="Int32" />
+          <Property Name="IdSite" Type="Int32" />
+          <Property Name="NombreTipoContrato" Type="Int32" />
+          <Property Name="NombreTipoCosto" Type="Int32" />
+          <Property Name="Salario" Type="Int32" />
+          <Property Name="SupervisorOperativo" Type="Int32" />
+          <Property Name="TrabajaFestivos" Type="Byte" />
+          <Property Name="CarneDeSitel" Type="Int32" />
+          <Property Name="ParkEdificio" Type="Byte" />
+          <Property Name="MarcaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ColorCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="PlacaCarro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NoParkPin" Type="Int32" />
+          <Property Name="FotoURL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FechaRetiro" Type="DateTime" Precision="3" />
+          <Property Name="RazonRetiro" Type="Int32" />
+          <Property Name="DateLastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="Actualizado" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NumeroEmpleado" Type="Int32" />
+          <Property Name="EmailCorporativo" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PuestoNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ExtFisica" Type="Int32" />
+          <Property Name="SubBu" Type="Int32" />
+          <Property Name="IdPosting" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Areas" Relationship="AMBARModel.FK_dbo_Personas_dbo_Areas_id" FromRole="Personas" ToRole="Areas" />
+          <NavigationProperty Name="Cargos" Relationship="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" FromRole="Personas" ToRole="Cargos" />
+          <NavigationProperty Name="Operaciones" Relationship="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id" FromRole="Personas" ToRole="Operaciones" />
+          <NavigationProperty Name="Rhs" Relationship="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh" FromRole="Personas" ToRole="Rhs" />
+          <NavigationProperty Name="Sites" Relationship="AMBARModel.FK_dbo_Personas_dbo_Sites_id" FromRole="Personas" ToRole="Sites" />
+          <NavigationProperty Name="Usuarios" Relationship="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id" FromRole="Personas" ToRole="Usuarios" />
+        </EntityType>
+        <Association Name="FK_dbo_Personas_dbo_Areas_id">
+          <End Type="AMBARModel.Areas" Role="Areas" Multiplicity="0..1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Areas">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdArea" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Cargos_id">
+          <End Type="AMBARModel.Cargos" Role="Cargos" Multiplicity="0..1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdCargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_Personas_dbo_Operaciones_id">
+          <End Type="AMBARModel.Operaciones" Role="Operaciones" Multiplicity="0..1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Operaciones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Personas">
+              <PropertyRef Name="IdOperacion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_dbo_Personas_dbo_Rhs_idRh">
-          <End Role="Rhs" Type="Self.Rhs" Multiplicity="0..1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <End Type="AMBARModel.Rhs" Role="Rhs" Multiplicity="0..1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Rhs">
               <PropertyRef Name="idRh" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idRh" />
+              <PropertyRef Name="IdRh" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Personas_dbo_Sites_id">
-          <End Role="Sites" Type="Self.Sites" Multiplicity="0..1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <End Type="AMBARModel.Sites" Role="Sites" Multiplicity="0..1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Sites">
               <PropertyRef Name="Id" />
@@ -461,56 +550,49 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_dbo_Personas_dbo_Usuarios_id">
-          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="1" />
-          <End Role="Personas" Type="Self.Personas" Multiplicity="*" />
+          <End Type="AMBARModel.Usuarios" Role="Usuarios" Multiplicity="1" />
+          <End Type="AMBARModel.Personas" Role="Personas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Usuarios">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Personas">
-              <PropertyRef Name="idUsuario" />
+              <PropertyRef Name="IdUsuario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="AMBAREntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Areas" EntityType="Self.Areas" />
-          <EntitySet Name="Cargos" EntityType="Self.Cargos" />
-          <EntitySet Name="Operaciones" EntityType="Self.Operaciones" />
-          <EntitySet Name="Perfiles" EntityType="Self.Perfiles" />
-          <EntitySet Name="Permisos" EntityType="Self.Permisos" />
-          <EntitySet Name="Personas" EntityType="Self.Personas" />
-          <EntitySet Name="Rhs" EntityType="Self.Rhs" />
-          <EntitySet Name="Sites" EntityType="Self.Sites" />
-          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" />
-          <AssociationSet Name="FK_dbo_Personas_dbo_Areas_id" Association="Self.FK_dbo_Personas_dbo_Areas_id">
-            <End Role="Areas" EntitySet="Areas" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Personas_dbo_Cargos_id" Association="Self.FK_dbo_Personas_dbo_Cargos_id">
-            <End Role="Cargos" EntitySet="Cargos" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Personas_dbo_Operaciones_id" Association="Self.FK_dbo_Personas_dbo_Operaciones_id">
-            <End Role="Operaciones" EntitySet="Operaciones" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Usuairos_dbo_Perfiles_idRh" Association="Self.FK_dbo_Usuairos_dbo_Perfiles_idRh">
-            <End Role="Perfiles" EntitySet="Perfiles" />
-            <End Role="Usuarios" EntitySet="Usuarios" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Personas_dbo_Rhs_idRh" Association="Self.FK_dbo_Personas_dbo_Rhs_idRh">
-            <End Role="Rhs" EntitySet="Rhs" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Personas_dbo_Sites_id" Association="Self.FK_dbo_Personas_dbo_Sites_id">
-            <End Role="Sites" EntitySet="Sites" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_Personas_dbo_Usuarios_id" Association="Self.FK_dbo_Personas_dbo_Usuarios_id">
-            <End Role="Usuarios" EntitySet="Usuarios" />
-            <End Role="Personas" EntitySet="Personas" />
-          </AssociationSet>
-        </EntityContainer>
+        <EntityType Name="NovedadesUsuarios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoNovedad" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FechaNovedad" Type="DateTime" Precision="3" />
+          <Property Name="FechaFacturado" Type="DateTime" Precision="3" />
+          <Property Name="Nombres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cedula" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="NumeroDias" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="FechaInicio" Type="DateTime" Precision="0" />
+          <Property Name="FechaFin" Type="DateTime" Precision="0" />
+          <Property Name="Area" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IdArea" Type="Int32" />
+          <Property Name="Operacion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IdOperacion" Type="Int32" />
+          <Property Name="Cargo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="IdCargo" Type="Int32" />
+          <Property Name="Concepto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Jurado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Horario" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NombreBackup" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Motivo" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Ususario" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="IdUsuario" Type="Int32" />
+          <Property Name="Estado" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Observacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HoraInicio" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="HoraFin" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IdPersona" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -566,58 +648,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Personas">
-            <EntityTypeMapping TypeName="AMBARModel.Personas">
-              <MappingFragment StoreEntitySet="Personas">
-                <ScalarProperty Name="PersonaId" ColumnName="PersonaId" />
-                <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
-                <ScalarProperty Name="segundoApellido" ColumnName="segundoApellido" />
-                <ScalarProperty Name="nombres" ColumnName="nombres" />
-                <ScalarProperty Name="cedula" ColumnName="cedula" />
-                <ScalarProperty Name="fechaDeNacimiento" ColumnName="fechaDeNacimiento" />
-                <ScalarProperty Name="lugarDeNacimiento" ColumnName="lugarDeNacimiento" />
-                <ScalarProperty Name="sexo" ColumnName="sexo" />
-                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
-                <ScalarProperty Name="idRh" ColumnName="idRh" />
-                <ScalarProperty Name="eps" ColumnName="eps" />
-                <ScalarProperty Name="direccionResidencia" ColumnName="direccionResidencia" />
-                <ScalarProperty Name="barrio" ColumnName="barrio" />
-                <ScalarProperty Name="telefono" ColumnName="telefono" />
-                <ScalarProperty Name="celular" ColumnName="celular" />
-                <ScalarProperty Name="correo" ColumnName="correo" />
-                <ScalarProperty Name="personaDeEmergencia" ColumnName="personaDeEmergencia" />
-                <ScalarProperty Name="telefonoDeEmergencia" ColumnName="telefonoDeEmergencia" />
-                <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
-                <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
-                <ScalarProperty Name="idArea" ColumnName="idArea" />
-                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
-                <ScalarProperty Name="IdSite" ColumnName="IdSite" />
-                <ScalarProperty Name="nombreTipoContrato" ColumnName="nombreTipoContrato" />
-                <ScalarProperty Name="nombreTipoCosto" ColumnName="nombreTipoCosto" />
-                <ScalarProperty Name="Salario" ColumnName="Salario" />
-                <ScalarProperty Name="supervisorOperativo" ColumnName="supervisorOperativo" />
-                <ScalarProperty Name="trabajaFestivos" ColumnName="trabajaFestivos" />
-                <ScalarProperty Name="carneDeSitel" ColumnName="carneDeSitel" />
-                <ScalarProperty Name="parkEdificio" ColumnName="parkEdificio" />
-                <ScalarProperty Name="marcaCarro" ColumnName="marcaCarro" />
-                <ScalarProperty Name="colorCarro" ColumnName="colorCarro" />
-                <ScalarProperty Name="placaCarro" ColumnName="placaCarro" />
-                <ScalarProperty Name="NoParkPin" ColumnName="NoParkPin" />
-                <ScalarProperty Name="fotoURL" ColumnName="fotoURL" />
-                <ScalarProperty Name="fechaRetiro" ColumnName="fechaRetiro" />
-                <ScalarProperty Name="razonRetiro" ColumnName="razonRetiro" />
-                <ScalarProperty Name="dateLastUpdate" ColumnName="dateLastUpdate" />
-                <ScalarProperty Name="actualizado" ColumnName="actualizado" />
-                <ScalarProperty Name="numeroEmpleado" ColumnName="numeroEmpleado" />
-                <ScalarProperty Name="emailCorporativo" ColumnName="emailCorporativo" />
-                <ScalarProperty Name="puestoNo" ColumnName="puestoNo" />
-                <ScalarProperty Name="extFisica" ColumnName="extFisica" />
-                <ScalarProperty Name="subBu" ColumnName="subBu" />
-                <ScalarProperty Name="idPosting" ColumnName="idPosting" />
-                <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Rhs">
             <EntityTypeMapping TypeName="AMBARModel.Rhs">
               <MappingFragment StoreEntitySet="Rhs">
@@ -644,6 +674,99 @@
                 <ScalarProperty Name="FechaActualizacion" ColumnName="FechaActualizacion" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="IdPerfil" ColumnName="IdPerfil" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoNovedades">
+            <EntityTypeMapping TypeName="AMBARModel.TipoNovedades">
+              <MappingFragment StoreEntitySet="TipoNovedades">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personas">
+            <EntityTypeMapping TypeName="AMBARModel.Personas">
+              <MappingFragment StoreEntitySet="Personas">
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="IdPosting" ColumnName="IdPosting" />
+                <ScalarProperty Name="SubBu" ColumnName="SubBu" />
+                <ScalarProperty Name="ExtFisica" ColumnName="ExtFisica" />
+                <ScalarProperty Name="PuestoNo" ColumnName="PuestoNo" />
+                <ScalarProperty Name="EmailCorporativo" ColumnName="EmailCorporativo" />
+                <ScalarProperty Name="NumeroEmpleado" ColumnName="NumeroEmpleado" />
+                <ScalarProperty Name="Actualizado" ColumnName="Actualizado" />
+                <ScalarProperty Name="DateLastUpdate" ColumnName="DateLastUpdate" />
+                <ScalarProperty Name="RazonRetiro" ColumnName="RazonRetiro" />
+                <ScalarProperty Name="FechaRetiro" ColumnName="FechaRetiro" />
+                <ScalarProperty Name="FotoURL" ColumnName="FotoURL" />
+                <ScalarProperty Name="NoParkPin" ColumnName="NoParkPin" />
+                <ScalarProperty Name="PlacaCarro" ColumnName="PlacaCarro" />
+                <ScalarProperty Name="ColorCarro" ColumnName="ColorCarro" />
+                <ScalarProperty Name="MarcaCarro" ColumnName="MarcaCarro" />
+                <ScalarProperty Name="ParkEdificio" ColumnName="ParkEdificio" />
+                <ScalarProperty Name="CarneDeSitel" ColumnName="CarneDeSitel" />
+                <ScalarProperty Name="TrabajaFestivos" ColumnName="TrabajaFestivos" />
+                <ScalarProperty Name="SupervisorOperativo" ColumnName="SupervisorOperativo" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="NombreTipoCosto" ColumnName="NombreTipoCosto" />
+                <ScalarProperty Name="NombreTipoContrato" ColumnName="NombreTipoContrato" />
+                <ScalarProperty Name="IdSite" ColumnName="IdSite" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+                <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+                <ScalarProperty Name="TelefonoDeEmergencia" ColumnName="TelefonoDeEmergencia" />
+                <ScalarProperty Name="PersonaDeEmergencia" ColumnName="PersonaDeEmergencia" />
+                <ScalarProperty Name="Correo" ColumnName="Correo" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Barrio" ColumnName="Barrio" />
+                <ScalarProperty Name="DireccionResidencia" ColumnName="DireccionResidencia" />
+                <ScalarProperty Name="Eps" ColumnName="Eps" />
+                <ScalarProperty Name="IdRh" ColumnName="IdRh" />
+                <ScalarProperty Name="EstadoCivil" ColumnName="EstadoCivil" />
+                <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+                <ScalarProperty Name="LugarDeNacimiento" ColumnName="LugarDeNacimiento" />
+                <ScalarProperty Name="FechaDeNacimiento" ColumnName="FechaDeNacimiento" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+                <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NovedadesUsuarios">
+            <EntityTypeMapping TypeName="AMBARModel.NovedadesUsuarios">
+              <MappingFragment StoreEntitySet="NovedadesUsuarios">
+                <ScalarProperty Name="IdPersona" ColumnName="IdPersona" />
+                <ScalarProperty Name="HoraFin" ColumnName="HoraFin" />
+                <ScalarProperty Name="HoraInicio" ColumnName="HoraInicio" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+                <ScalarProperty Name="Ususario" ColumnName="Ususario" />
+                <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+                <ScalarProperty Name="NombreBackup" ColumnName="NombreBackup" />
+                <ScalarProperty Name="Horario" ColumnName="Horario" />
+                <ScalarProperty Name="Jurado" ColumnName="Jurado" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="IdCargo" ColumnName="IdCargo" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+                <ScalarProperty Name="Operacion" ColumnName="Operacion" />
+                <ScalarProperty Name="IdArea" ColumnName="IdArea" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+                <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+                <ScalarProperty Name="NumeroDias" ColumnName="NumeroDias" />
+                <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+                <ScalarProperty Name="Nombres" ColumnName="Nombres" />
+                <ScalarProperty Name="FechaFacturado" ColumnName="FechaFacturado" />
+                <ScalarProperty Name="FechaNovedad" ColumnName="FechaNovedad" />
+                <ScalarProperty Name="TipoNovedad" ColumnName="TipoNovedad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

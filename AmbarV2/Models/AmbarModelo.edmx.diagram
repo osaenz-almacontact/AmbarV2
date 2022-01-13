@@ -10,17 +10,19 @@
         <EntityTypeShape EntityType="AMBARModel.Operaciones" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
         <EntityTypeShape EntityType="AMBARModel.Perfiles" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AMBARModel.Permisos" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Personas" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="AMBARModel.Rhs" Width="1.5" PointX="0.5" PointY="9" IsExpanded="true" />
         <EntityTypeShape EntityType="AMBARModel.Sites" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
         <EntityTypeShape EntityType="AMBARModel.Usuarios" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Areas_id" ManuallyRouted="false" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" ManuallyRouted="false" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id" ManuallyRouted="false" />
         <AssociationConnector Association="AMBARModel.FK_dbo_Usuairos_dbo_Perfiles_idRh" ManuallyRouted="false" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh" ManuallyRouted="false" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Sites_id" ManuallyRouted="false" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AMBARModel.TipoNovedades" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AMBARModel.Personas" Width="1.5" PointX="5.375" PointY="2.875" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Areas_id" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Sites_id" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id" />
+        <EntityTypeShape EntityType="AMBARModel.NovedadesUsuarios" Width="1.5" PointX="7.375" PointY="4.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

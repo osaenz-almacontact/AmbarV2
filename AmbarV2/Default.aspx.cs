@@ -15,7 +15,11 @@ namespace AmbarV2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Obtener();
+            LabFecha.Text = "Hoy " + DateTime.Now.ToString("MM/dd/yyyy");
+            if (!IsPostBack)
+            {
+                Obtener();
+            }
         }
         public void Obtener()
         { 

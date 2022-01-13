@@ -13,19 +13,14 @@
         <section class="right-image">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <div class="left-content">
-                            <h3>Almacontact</h3>
-                            <p>
-                                Almacontact opera en sus dos sitios administrativos y operativos en Bogotá y Sabaneta, con un crecimiento constante de recursos profesionales y calificados: los agentes de los Contact Center interactúan en un entorno dinámico y operan a través de los servicios innovadores y las soluciones llave en mano de <i>Digital Customer Management</i> y herramientas avanzadas de análisis para una excelente experiencia del cliente.
-                            </p>
-                            <img class="rounded mr-2 mb-2" style="max-width: 700px" src="../Content/Images/Empresa/mondo-b.jpg" />
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-
-                        <div class="rigth-content">
+                            <div style="margin-top: 10%">
+                                <h3>Almacontact</h3>
+                                <p>
+                                    Almacontact opera en sus dos sitios administrativos y operativos en Bogotá y Sabaneta, con un crecimiento constante de recursos profesionales y calificados: los agentes de los Contact Center interactúan en un entorno dinámico y operan a través de los servicios innovadores y las soluciones llave en mano de <i>Digital Customer Management</i> y herramientas avanzadas de análisis para una excelente experiencia del cliente.
+                                </p>
+                            </div>
                             <div class="card mb-2" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
@@ -61,7 +56,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <img class="card-img-top" src="../Content/Images/Empresa/Sites/Site%20BOG.png" alt="Unsplash">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <img class="card-img-top" src="../Content/Images/Empresa/Sites/Site%20MED.png" alt="Unsplash">
+                            </div>
+                        </div>
+
+                    </div>
+                    <br />
+
                 </div>
+
             </div>
         </section>
     </div>

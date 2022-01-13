@@ -33,7 +33,7 @@
                             </a>
                         </li>
 
-                        <li><a href="simple_page.html">Nomina</a></li>
+                        <%--<li><a href="simple_page.html">Nomina</a></li>--%>
 
                         <%-- <li class="sidebar-header">Tools & Components
                         </li>--%>
@@ -49,20 +49,83 @@
                             </ul>
                         </li>
                         <li class="sidebar-item" runat="server">
-                            <a class="sidebar-link" href="/#">
+                            <a href="#noti" data-toggle="collapse" class="sidebar-link collapsed">
                                 <i class="align-middle" data-feather="bell"></i><span class="align-middle">Notificaciones</span>
                             </a>
+                            <ul id="noti" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Notificaciones/Noticias.aspx">Noticias</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Notificaciones/Vacantes.aspx">Vacantes</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Notificaciones/Notificaciones.aspx">Notificaciones</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Novedades/IngresoDeNovedades.aspx">Novedades</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" id="LiAprovacionDeNovedades" href="Novedades/AprovacionDeNovedades.aspx">Aprovacion Novedades</a></li>
+                            </ul>
+                        </li>
+
+                         <li class="sidebar-item">
+                            <a href="#calidad" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="check-circle"></i><span class="align-middle">Gestión de calidad</span>
+                            </a>
+                            <ul id="calidad" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Info</a></li>
+                            </ul>
                         </li>
 
                         <li class="sidebar-item">
                             <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-                                <i class="align-middle" data-feather="users"></i><span class="align-middle">Human Resources</span>
+                                <i class="align-middle" data-feather="users"></i><span class="align-middle">Gestion Humana</span>
                             </a>
                             <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Brigadistas</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Entrenamiento</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Organigrama</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/Documentacion/Documentacion.aspx">Documetacion</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/DirectorioCorporativo.aspx">Directorio corporativo</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#operaciones" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="aperture"></i><span class="align-middle">Operaciones</span>
+                            </a>
+                            <ul id="operaciones" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoClaro.aspx">Claro</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoLATAM.aspx">LATAM</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoSamsung.aspx">Samsung</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Leal</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Fortinet</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">ENEL</a></li>
+                            </ul>
+                        </li>
+
+                         <li class="sidebar-item">
+                            <a href="#areas" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="aperture"></i><span class="align-middle">Áreas</span>
+                            </a>
+                            <ul id="areas" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoClaro.aspx">Claro</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoLATAM.aspx">LATAM</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoSamsung.aspx">Samsung</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Leal</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Fortinet</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">ENEL</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#financiero" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="dollar-sign"></i><span class="align-middle">Financiero</span>
+                            </a>
+                            <ul id="financiero" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Info</a></li>
+                            </ul>
+                        </li>
+
+                         <li class="sidebar-item">
+                            <a href="#seleccion" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="mail"></i><span class="align-middle">Selecciom y Contratacion</span>
+                            </a>
+                            <ul id="seleccion" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Nuevas vacantes</a></li>
                             </ul>
                         </li>
 
@@ -71,7 +134,7 @@
                                 <i class="align-middle" data-feather="thermometer"></i><span class="align-middle">COVID-19</span>
                             </a>
                             <ul id="cov" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/Videos/CovidVideo.aspx">Videos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/Videos/CovidVideo.aspx">Información </a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/CovidDocumentos.aspx">Documentación</a></li>
                             </ul>
                         </li>
@@ -246,7 +309,7 @@
                                 </a>
 
                                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-                                    <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
+                                    <img src='<%#Eval("Foto") %>' class="avatar img-fluid rounded mr-1" />
                                     <span class="text-dark">
                                         <asp:Label ID="LabNombres" runat="server" Font-Size="15px" Text="Nombres y apellidos"></asp:Label></span>
                                 </a>
@@ -302,7 +365,7 @@
         </div>
 
     </form>
-    <script src="/Scripts/js/vendor.js"></script>
+    <%--<script src="/Scripts/js/vendor.js"></script>--%>
     <script src="/Scripts/js/app.js"></script>
     <%--<script src="/Scripts/jquery/jquery.js"></script>
     <script src="/Scripts/jquery/jquery.min.js"></script>

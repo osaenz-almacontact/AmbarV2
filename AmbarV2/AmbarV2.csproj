@@ -126,12 +126,21 @@
     <Content Include="Content\Images\Card\card-info-blue-button.png" />
     <Content Include="Content\Images\Card\card-success-green-button.png" />
     <Content Include="Content\Images\Card\card-waring-orange-button.png" />
+    <Content Include="Content\Images\Carousel\Foto1.jpg" />
+    <Content Include="Content\Images\Carousel\Foto2.jpg" />
+    <Content Include="Content\Images\Carousel\Foto3.jpg" />
+    <Content Include="Content\Images\Comunicados\image001.png" />
+    <Content Include="Content\Images\COVID\Cuidados.jpg" />
+    <Content Include="Content\Images\COVID\lavado.png" />
+    <Content Include="Content\Images\COVID\MitosYRealidades1.png" />
+    <Content Include="Content\Images\COVID\Vacunacion.png" />
     <Content Include="Content\Images\DashboardSCC\Personal1.jpeg" />
     <Content Include="Content\Images\DashboardSCC\Personal2.jpeg" />
     <Content Include="Content\Images\DashboardSCC\Personal3.jpg" />
     <Content Include="Content\Images\DashboardSCC\Personal4.jpg" />
     <Content Include="Content\Images\Empresa\Brasile.jpg" />
     <Content Include="Content\Images\Empresa\Guido-Fabbri_Colombia_500x500.png" />
+    <Content Include="Content\Images\Empresa\ImgOperaciones\Claro.JPG" />
     <Content Include="Content\Images\Empresa\mondo-b.jpg" />
     <Content Include="Content\Images\Empresa\Mondo_900x600_ES.jpg" />
     <Content Include="Content\Images\Empresa\Oscar-Estrada-Arevalo_Colombia.jpg" />
@@ -139,6 +148,8 @@
     <Content Include="Content\Images\Empresa\Romania.jpg" />
     <Content Include="Content\Images\Empresa\sede-contact.jpg" />
     <Content Include="Content\Images\Empresa\sede-tunisy.jpg" />
+    <Content Include="Content\Images\Empresa\Sites\Site BOG.png" />
+    <Content Include="Content\Images\Empresa\Sites\Site MED.png" />
     <Content Include="Content\Images\Empresa\team-guzman.jpg" />
     <Content Include="Content\Images\Empresa\vision-b2.jpg" />
     <Content Include="Content\Images\globos.png" />
@@ -151,6 +162,9 @@
     <Content Include="Content\img\avatars\avatar-5.jpg" />
     <Content Include="Content\img\avatars\avatar.jpg" />
     <Content Include="Content\img\icons\icon-48x48.png" />
+    <Content Include="Content\img\media\AlmaAlcance.jpg" />
+    <Content Include="Content\img\media\AlmaMision.jpg" />
+    <Content Include="Content\img\media\AlmaVision.jpg" />
     <Content Include="Content\img\photos\unsplash-1.jpg" />
     <Content Include="Content\img\photos\unsplash-2.jpg" />
     <Content Include="Content\img\photos\unsplash-3.jpg" />
@@ -176,6 +190,9 @@
     <Content Include="Empresa\PresenciaGlobal.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="InfoOperaciones\InfoClaro.aspx" />
+    <Content Include="InfoOperaciones\InfoLATAM.aspx" />
+    <Content Include="InfoOperaciones\InfoSamsung.aspx" />
     <Content Include="Login\ErrorAutenticacion.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="MiPerfil\MiPerfil.aspx" />
@@ -189,9 +206,16 @@
       <DependentUpon>AmbarModelo.edmx</DependentUpon>
       <LastGenOutput>AmbarModelo.cs</LastGenOutput>
     </Content>
+    <Content Include="Notificaciones\Noticias.aspx" />
+    <Content Include="Notificaciones\Notificaciones.aspx" />
+    <Content Include="Notificaciones\Vacantes.aspx" />
+    <Content Include="Novedades\AprovacionDeNovedades.aspx" />
     <Content Include="Novedades\IngresoDeNovedades.aspx" />
     <Content Include="Empresa\Oficinas.aspx" />
+    <Content Include="RecursosHumanos\DirectorioCorporativo.aspx" />
     <Content Include="RecursosHumanos\Documentacion\Documentacion.aspx" />
+    <Content Include="Scripts\Jquery\jquery.js" />
+    <Content Include="Scripts\Jquery\jquery.min.js" />
     <Content Include="Scripts\js\app.js" />
     <Content Include="Scripts\src\js\app.js" />
     <Content Include="Scripts\src\js\modules\bootstrap.js" />
@@ -272,6 +296,27 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="InfoOperaciones\InfoClaro.aspx.cs">
+      <DependentUpon>InfoClaro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoClaro.aspx.designer.cs">
+      <DependentUpon>InfoClaro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoLATAM.aspx.cs">
+      <DependentUpon>InfoLATAM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoLATAM.aspx.designer.cs">
+      <DependentUpon>InfoLATAM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoSamsung.aspx.cs">
+      <DependentUpon>InfoSamsung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoSamsung.aspx.designer.cs">
+      <DependentUpon>InfoSamsung.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login\ErrorAutenticacion.aspx.cs">
       <DependentUpon>ErrorAutenticacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -286,6 +331,8 @@
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Maill\BaseEmail.cs" />
+    <Compile Include="Maill\Email.cs" />
     <Compile Include="MiPerfil\MiPerfil.aspx.cs">
       <DependentUpon>MiPerfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -314,6 +361,9 @@
     <Compile Include="Models\Cargos.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\NovedadesUsuarios.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Operaciones.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
@@ -332,8 +382,39 @@
     <Compile Include="Models\Sites.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TipoNovedades.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\Noticias.aspx.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\Noticias.aspx.designer.cs">
+      <DependentUpon>Noticias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\Notificaciones.aspx.cs">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\Notificaciones.aspx.designer.cs">
+      <DependentUpon>Notificaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notificaciones\Vacantes.aspx.cs">
+      <DependentUpon>Vacantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notificaciones\Vacantes.aspx.designer.cs">
+      <DependentUpon>Vacantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Novedades\AprovacionDeNovedades.aspx.cs">
+      <DependentUpon>AprovacionDeNovedades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Novedades\AprovacionDeNovedades.aspx.designer.cs">
+      <DependentUpon>AprovacionDeNovedades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Novedades\IngresoDeNovedades.aspx.cs">
       <DependentUpon>IngresoDeNovedades.aspx</DependentUpon>
@@ -349,6 +430,13 @@
     <Compile Include="Empresa\Oficinas.aspx.designer.cs">
       <DependentUpon>Oficinas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\DirectorioCorporativo.aspx.cs">
+      <DependentUpon>DirectorioCorporativo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\DirectorioCorporativo.aspx.designer.cs">
+      <DependentUpon>DirectorioCorporativo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RecursosHumanos\Documentacion\Documentacion.aspx.cs">
       <DependentUpon>Documentacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -359,6 +447,7 @@
     <Compile Include="Repositorio\AreaContexto.cs" />
     <Compile Include="Repositorio\CargoContexto.cs" />
     <Compile Include="Repositorio\LoginContexto.cs" />
+    <Compile Include="Repositorio\NovedadesUsuarioContexto.cs" />
     <Compile Include="Repositorio\OperacionContexto.cs" />
     <Compile Include="Repositorio\PersonaContexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

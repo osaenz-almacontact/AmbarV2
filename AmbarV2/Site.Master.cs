@@ -16,7 +16,10 @@ namespace AmbarV2
 
         #region Contextos
 
-        string EmployeeLogin = "oscarord";
+        //string EmployeeLogin = "oscarord";
+        string EmployeeLogin = "jgarcia";
+        //string EmployeeLogin = "wvaldes";
+        //string EmployeeLogin = "oscarord";
         LoginContexto contextoUsuarios = new LoginContexto();
         AreaContexto contextoAreas = new AreaContexto();
         OperacionContexto contextoOperaciones = new OperacionContexto();
@@ -29,24 +32,28 @@ namespace AmbarV2
         {
             try
             {
-                if (!this.Page.User.Identity.IsAuthenticated)
+                if (!IsPostBack)
                 {
-                    //FormsAuthentication.RedirectToLoginPage();
                     Login();
-                }
-                else
-                {
-                    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
-                    //{
-                    //    FormsAuthentication.RedirectToLoginPage();
-                    //}
-                    //else
-                    //{
-                    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
-                    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
-                    //     = NombresYApellidos;
+                    if (!this.Page.User.Identity.IsAuthenticated)
+                    {
+                        //FormsAuthentication.RedirectToLoginPage();
+                        Login();
+                    }
+                    else
+                    {
+                        //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
+                        //{
+                        //    FormsAuthentication.RedirectToLoginPage();
+                        //}
+                        //else
+                        //{
+                        //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
+                        //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
+                        //     = NombresYApellidos;
 
-                    //}
+                        //}
+                    }
                 }
             }
             catch (Exception ex)
@@ -65,23 +72,26 @@ namespace AmbarV2
             List<Sites> ListSite = contextoSites.ObtenerSites();
 
             var query = (from Persona in ListPersonas
-                         join Area in ListAreas on Persona.idArea equals Area.Id
-                         join Operacion in ListOperaciones on Persona.idOperacion equals Operacion.Id
+                         join Area in ListAreas on Persona.IdArea equals Area.Id
+                         join Operacion in ListOperaciones on Persona.IdOperacion equals Operacion.Id
                          join Cargo in ListCargos on Persona.IdCargo equals Cargo.Id
                          join Site in ListSite on Persona.IdSite equals Site.Id
-                         join Usuario in ListUsuarios on Persona.idUsuario equals Usuario.Id
+                         join Usuario in ListUsuarios on Persona.IdUsuario equals Usuario.Id
                          join Perfil in ListPerfiles on Usuario.IdPerfil equals Perfil.Id
                          where Usuario.Login == EmployeeLogin
                          select new
                          {
-                             Nombres = Persona.primerApellido + ' ' + Persona.nombres,
+                             IdPersona = Persona.Id,
+                             IdUsuario= Usuario.Id,
+                             Nombres = Persona.PrimerApellido + ' ' + Persona.Nombres,
                              Operacion =Operacion.Nombre,
                              Area = Area.Nombre,
                              Cargo = Cargo.Nombre,
                              Site = Site.Nombre,
                              EstadoUsuairo = Perfil.Estado,
                              Perfil = Perfil.Nombre,
-                             IdPerfil = Perfil.Id
+                             IdPerfil = Perfil.Id,
+                             Foto = Persona.FotoURL
                          }).ToList();
 
             var Retorno = query.Find(x => x.EstadoUsuairo.HasValue);
@@ -95,6 +105,8 @@ namespace AmbarV2
                     if (Retorno.EstadoUsuairo == 1)
                     {
                         LabNombres.Text = Retorno.Nombres.ToString();
+                        Session["IdPersona"] = Retorno.IdPersona.ToString();
+                        Session["IdUsuario"] = Retorno.IdUsuario.ToString();
                         Session["Nombres"] = Retorno.Nombres.ToString();
                         Session["Operacion"] = Retorno.Operacion.ToString();
                         Session["Area"] = Retorno.Area.ToString();

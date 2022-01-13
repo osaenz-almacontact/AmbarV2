@@ -728,7 +728,7 @@
                                                         </div>
                                                         <div class="mb-1">
                                                             <span class="text-danger"><i class="mdi mdi-arrow-bottom-right"></i>-0,0% </span>
-                                                            <span class="text-muted">Since last week</span>
+                                                            <span class="text-muted">Desde el mes pasado</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -750,7 +750,7 @@
                                                         </div>
                                                         <div class="mb-1">
                                                             <span class="text-danger"><i class="mdi mdi-arrow-bottom-right"></i>0,0% </span>
-                                                            <span class="text-muted">Since last week</span>
+                                                            <span class="text-muted">Desde el mes pasado</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -760,7 +760,7 @@
                                                         <h1 class="display-5 mt-1 mb-3">64</h1>
                                                         <div class="mb-1">
                                                             <span class="text-danger"><i class="mdi mdi-arrow-bottom-right"></i>-2.25% </span>
-                                                            <span class="text-muted">Since last week</span>
+                                                            <span class="text-muted">Desde el mes pasado</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -772,71 +772,43 @@
                                                     <table class="table mb-0">
                                                         <thead>
                                                             <tr>
-                                                                <th scope="col">Dia</th>
-                                                                <th scope="col">Ingreso</th>
-                                                                <th scope="col">Break #1</th>
-                                                                <th scope="col">Break #2</th>
-                                                                <th scope="col">Dialogo</th>
-                                                                <th scope="col">Formacion</th>
+                                                                <th scope="col">Semana</th>
+                                                                <th scope="col">Indicador 1</th>
+                                                                <th scope="col">Indicador 2</th>
+                                                                <th scope="col">Indicador 3</th>
+                                                                <th scope="col">Indicador 4</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             <tr>
-                                                                <th scope="row">Lunes</th>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">Martes</th>
-                                                                <td>Cell</td>
+                                                                <th scope="row">Semana 1</th>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Miercoles</th>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">Jueves</th>
-                                                                <td>Cell</td>
+                                                                <th scope="row">Semana 2</th>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Viernes</th>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                                <td>Cell</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th scope="row">Sabado</th>
-                                                                <td>Cell</td>
+                                                                <th scope="row">Semana 3</th>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                             </tr>
                                                             <tr>
-                                                                <th scope="row">Domingo</th>
-                                                                <td>Cell</td>
+                                                                <th scope="row">Semana 4</th>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                                 <td>Cell</td>
                                                             </tr>
+                                                            
                                                         </tbody>
                                                     </table>
                                                 </div>

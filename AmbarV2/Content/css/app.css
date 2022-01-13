@@ -12485,7 +12485,8 @@ body {
 
 .sidebar, .sidebar-content {
     transition: margin-left .35s ease-in-out,left .35s ease-in-out,margin-right .35s ease-in-out,right .35s ease-in-out;
-    background: #222e3c
+    /*background: #12679B*/
+    background: linear-gradient(70deg, #1B1464, #00467E);
 }
 
 .sidebar-content {
@@ -12510,7 +12511,8 @@ body {
     text-decoration: none;
     cursor: pointer;
     color: rgba(233,236,239,.5);
-    background: #222e3c;
+    /*background: #12679B;*/
+    /*background: linear-gradient(70deg, #1B1464, #00467E);*/
     border-left: 3px solid transparent
 }
 
@@ -12524,7 +12526,8 @@ body {
     }
 
     .sidebar-link:hover {
-        background: #222e3c;
+        /*background: linear-gradient(70deg, #1B1464, #00467E);*/
+        /*background: #12679B;*/
         border-left-color: transparent
     }
 

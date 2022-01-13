@@ -30,9 +30,11 @@ namespace AmbarV2.Models
         public virtual DbSet<Operaciones> Operaciones { get; set; }
         public virtual DbSet<Perfiles> Perfiles { get; set; }
         public virtual DbSet<Permisos> Permisos { get; set; }
-        public virtual DbSet<Personas> Personas { get; set; }
         public virtual DbSet<Rhs> Rhs { get; set; }
         public virtual DbSet<Sites> Sites { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+        public virtual DbSet<TipoNovedades> TipoNovedades { get; set; }
+        public virtual DbSet<Personas> Personas { get; set; }
+        public virtual DbSet<NovedadesUsuarios> NovedadesUsuarios { get; set; }
     }
 }
