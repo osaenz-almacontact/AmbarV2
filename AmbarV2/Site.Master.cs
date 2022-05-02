@@ -1,9 +1,9 @@
-﻿using AmbarV2.Models;
+﻿using AmbarV2.Autenticacion;
+using AmbarV2.Models;
 using AmbarV2.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,17 +14,15 @@ namespace AmbarV2
     {
         //string EmployeeLogin = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-        #region Contextos
+        #region Variables
 
         //string EmployeeLogin = "oscarord";
         string EmployeeLogin = "jgarcia";
+        int IdPefil = 0;
+        Boolean returnError = false;
         //string EmployeeLogin = "wvaldes";
         //string EmployeeLogin = "oscarord";
-        LoginContexto contextoUsuarios = new LoginContexto();
-        AreaContexto contextoAreas = new AreaContexto();
-        OperacionContexto contextoOperaciones = new OperacionContexto();
-        CargoContexto contextoCargos = new CargoContexto();
-        SiteContexto contextoSites = new SiteContexto();
+
 
         #endregion
 
@@ -34,25 +32,45 @@ namespace AmbarV2
             {
                 if (!IsPostBack)
                 {
-                    Login();
                     if (!this.Page.User.Identity.IsAuthenticated)
                     {
-                        //FormsAuthentication.RedirectToLoginPage();
-                        Login();
+                        FormsAuthentication.RedirectToLoginPage();                        
                     }
                     else
                     {
-                        //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
-                        //{
-                        //    FormsAuthentication.RedirectToLoginPage();
-                        //}
-                        //else
-                        //{
-                        //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
-                        //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
-                        //     = NombresYApellidos;
+                        if ( (string)Session["Nombres"] == null)
+                        {
+                            //LoginControlador LoginControl = new LoginControlador();
+                            //if (LoginControl.LoginAutenticacion(EmployeeLogin, ref returnError) == "")
+                            //{
+                            //    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
+                            //    //{
+                            //    //    FormsAuthentication.RedirectToLoginPage();
+                            //    //}
+                            //    //else
+                            //    //{
+                            //    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
+                            //    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
+                            //    //     = NombresYApellidos;
+                            
+                            //}
+                            Login();
+                        }
+                        else
+                        {
+                            LabNombres.Text = Session["Nombres"].ToString();
+                            if(Session["IdPerfil"].ToString() == "6")
+                            {
+                                LiAprovacionDeNovedades.Visible = true;
+                            }
+                            else
+                            {
+                                LiAprovacionDeNovedades.Visible = false;
+                            }
+                        }
+                        
 
-                        //}
+
                     }
                 }
             }
@@ -63,6 +81,12 @@ namespace AmbarV2
         }
         public void Login()
         {
+            LoginContexto contextoUsuarios = new LoginContexto();
+            AreaContexto contextoAreas = new AreaContexto();
+            OperacionContexto contextoOperaciones = new OperacionContexto();
+            CargoContexto contextoCargos = new CargoContexto();
+            SiteContexto contextoSites = new SiteContexto();
+
             List<Usuarios> ListUsuarios = contextoUsuarios.ConsultarUsuarios();
             List<Perfiles> ListPerfiles = contextoUsuarios.ConsusltarPerfiles();
             List<Personas> ListPersonas = contextoUsuarios.ObtenerDatosPersona();
@@ -77,14 +101,14 @@ namespace AmbarV2
                          join Cargo in ListCargos on Persona.IdCargo equals Cargo.Id
                          join Site in ListSite on Persona.IdSite equals Site.Id
                          join Usuario in ListUsuarios on Persona.IdUsuario equals Usuario.Id
-                         join Perfil in ListPerfiles on Usuario.IdPerfil equals Perfil.Id
+                         join Perfil in ListPerfiles on Usuario.IdPerfilAlmaNet equals Perfil.Id
                          where Usuario.Login == EmployeeLogin
                          select new
                          {
                              IdPersona = Persona.Id,
-                             IdUsuario= Usuario.Id,
+                             IdUsuario = Usuario.Id,
                              Nombres = Persona.PrimerApellido + ' ' + Persona.Nombres,
-                             Operacion =Operacion.Nombre,
+                             Operacion = Operacion.Nombre,
                              Area = Area.Nombre,
                              Cargo = Cargo.Nombre,
                              Site = Site.Nombre,
@@ -115,6 +139,7 @@ namespace AmbarV2
                         Session["Estado"] = Retorno.EstadoUsuairo.ToString();
                         Session["Perfil"] = Retorno.Perfil.ToString();
                         Session["IdPerfil"] = Retorno.IdPerfil.ToString();
+                        Session["NT"] = EmployeeLogin;
                         //FormsAuthentication.RedirectFromLoginPage(TxtUsuario.Value, true);
                         break;
                     }
@@ -128,7 +153,11 @@ namespace AmbarV2
                     //FormsAuthentication.SetAuthCookie(user.Username, user.RememberMe);
                     //return RedirectToAction("Profile");
             }
+
+            
         }
+
+        
 
     }
 }

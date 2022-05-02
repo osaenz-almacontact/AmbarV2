@@ -66,6 +66,17 @@
             font-size: 14px;
         }
     </style>
+    <!---Alert---->
+    <div class="alert alert-danger alert-dismissible" role="alert" runat="server" id="DivAlert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="alert-message">
+            <strong>
+                <asp:Label Text="text" runat="server" Id="LabTipoMensajeAlerta"/>
+            </strong> <asp:Label Text="text" runat="server" ID="LabMensajeAlerta"/>
+        </div>
+    </div>
     <div class="container-fluid p-0">
 
         <h1 class="h3 mb-3">Mi Perfil</h1>
@@ -81,13 +92,13 @@
                     <div class="list-group list-group-flush" role="tablist">
                         <a class="list-group-item list-group-item-action active" data-toggle="list" href="#datosPersonales" role="tab">Datos Personales
                         </a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#horario" role="tab">Horario
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#horario" role="tab" runat="server" id="LinkHorario">Horario
                         </a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#indicadores" role="tab">Indicadores
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#indicadores" role="tab" runat="server" id="LinkIndicadores">Indicadores
                         </a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#reportesOnline" role="tab">Reportes Online
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#reportesOnline" role="tab" runat="server" id="LinkReportes">Reportes Online
                         </a>
-                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#generacionDeReportes" role="tab">Genreacion De Reportes
+                        <a class="list-group-item list-group-item-action" data-toggle="list" href="#generacionDeReportes" role="tab" runat="server" id="LinkAdminReportes">Genreacion De Reportes
                         </a>
                     </div>
                 </div>
@@ -99,8 +110,8 @@
 
                         <div class="card">
                             <div class="card-header">
-
-                                <h5 class="card-title mb-0">Public info</h5>
+                                <asp:HiddenField ID="HideIdPersona" runat="server" />
+                                <h5 class="card-title mb-0">Datos personales</h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -119,7 +130,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="inputUsername">Biography</label>
+                                                    <label for="inputUsername">Segundo Apellido</label>
                                                     <asp:TextBox runat="server" ID="TxtSegundoApellido" class="form-control" placeholder="Segundo Apellido" />
                                                 </div>
                                             </div>
@@ -140,22 +151,22 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="inputUsername">Cedula</label>
+                                            <label for="TxtCedula">Cedula</label>
                                             <asp:TextBox runat="server" ID="TxtCedula" placeholder="Cedula" class="form-control" />
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="inputUsername">Lugar De Nacimiento</label>
+                                            <label for="TxtLugarDeNacimiento">Lugar De Nacimiento</label>
                                             <asp:TextBox runat="server" ID="TxtLugarDeNacimiento" placeholder="Lugar De Nacimiento" class="form-control" />
                                         </div>
                                     </div>
 
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="inputUsername">Fecha De Nacimiento</label>
-                                            <input type="date" class="form-control" placeholder="Fecha De Ingreso">
+                                            <label for="TxtFechaDeNacimiento">Fecha De Nacimiento</label>
+                                            <asp:TextBox runat="server" Type="date" id="TxtFechaDeNacimiento" CssClass="form-control" Enabled="false"/>
                                         </div>
                                     </div>
                                 </div>
@@ -185,8 +196,8 @@
                                             <asp:DropDownList ID="DropGenero" class="form-control" runat="server">
                                                 <Items>
                                                     <asp:ListItem Text="(Seleccionar)" Value="-1" />
-                                                    <asp:ListItem Text="Masculino" Value="1" />
-                                                    <asp:ListItem Text="Femenino" Value="2" />
+                                                    <asp:ListItem Text="Masculino" Value="M" />
+                                                    <asp:ListItem Text="Femenino" Value="F" />
                                                 </Items>
                                             </asp:DropDownList>
                                         </div>
@@ -219,13 +230,13 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="inputUsername">Correo Personal</label>
-                                            <asp:TextBox runat="server" ID="TextBox9" placeholder="Nombres" class="form-control" />
+                                            <asp:TextBox runat="server" ID="TxtCorreo" placeholder="Nombres" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
 
-
-                                <div class="row">
+                                <%--EPS - ARL--%>
+                                <%--<div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="inputUsername">EPS</label>
@@ -241,7 +252,7 @@
                                     </div>
 
 
-                                </div>
+                                </div>--%>
                             </div>
 
                         </div>
@@ -250,26 +261,26 @@
                         <div class="card">
                             <div class="card-header">
 
-                                <h5 class="card-title mb-0">Private info</h5>
+                                <h5 class="card-title mb-0">Persona de emergencia</h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="inputUsername">Persona De Emergencia</label>
-                                            <asp:TextBox runat="server" ID="TextBox10" placeholder="Nombres" class="form-control" />
+                                            <label for="inputUsername">Nombre Contacto De Emergencia</label>
+                                            <asp:TextBox runat="server" ID="TxtNombrePersonaDeEmergencia" placeholder="Nombres" class="form-control" />
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="inputUsername">Telefono De Emergencia</label>
-                                            <asp:TextBox runat="server" ID="TextBox11" placeholder="Nombres" class="form-control" />
+                                            <asp:TextBox runat="server" ID="TxtTelefonoEmergencia" placeholder="Telefono" class="form-control" />
                                         </div>
                                     </div>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary btn-lg">Guardar cambios</button>
+                                <asp:Button Text="Actualizar Informacion" runat="server" CssClass="btn btn-primary btn-lg" id="BtnActualizarInfomracionPersonal" OnClick="BtnActualizarInfomracionPersonal_Click"/>
 
                             </div>
                         </div>

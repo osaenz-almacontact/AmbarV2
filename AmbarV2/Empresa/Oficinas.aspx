@@ -3,9 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container-fluid p-0">
         <div class="row mb-2 mb-xl-3">
-            <div class="col-auto d-none d-sm-block">
-                <h3><strong>Oficinas y sitios</strong> </h3>
-            </div>
+            <img class="card-img-top" src="../Content/Images/ImgOperaciones/ImgQuienesSomos/SiteBanner.jpg" alt="Unsplash">
         </div>
         <hr />
 
@@ -15,12 +13,13 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="left-content">
-                            <div style="margin-top: 10%">
-                                <h3>Almacontact</h3>
-                                <p>
+                            <div style="margin-top: 8%">
+                                <h3 style="color: #00467E;"><b>Almacontact</b> </h3>
+                                <p style="text-align: justify">
                                     Almacontact opera en sus dos sitios administrativos y operativos en Bogotá y Sabaneta, con un crecimiento constante de recursos profesionales y calificados: los agentes de los Contact Center interactúan en un entorno dinámico y operan a través de los servicios innovadores y las soluciones llave en mano de <i>Digital Customer Management</i> y herramientas avanzadas de análisis para una excelente experiencia del cliente.
                                 </p>
                             </div>
+                            <br />
                             <div class="card mb-2" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">

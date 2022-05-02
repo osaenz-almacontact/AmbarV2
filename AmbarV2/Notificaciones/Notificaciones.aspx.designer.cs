@@ -24,22 +24,22 @@ namespace AmbarV2.Notificaciones
         protected global::System.Web.UI.WebControls.TextBox TxtTituloNovedad;
 
         /// <summary>
-        /// Control TextBox1.
+        /// Control DropTipoComunicado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.DropDownList DropTipoComunicado;
 
         /// <summary>
-        /// Control TextBox2.
+        /// Control DropOperacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.DropDownList DropOperacion;
 
         /// <summary>
         /// Control TxtNoedad.
@@ -49,5 +49,14 @@ namespace AmbarV2.Notificaciones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtNoedad;
+
+        /// <summary>
+        /// Control BtnCrear.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnCrear;
     }
 }

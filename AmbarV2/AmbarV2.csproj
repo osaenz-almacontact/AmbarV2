@@ -117,8 +117,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="400.aspx" />
+    <Content Include="AlmaAmbiental\AlmaAmbiental.aspx" />
     <Content Include="ClimaYLiderazgo\ClimaYLiderazgo.aspx" />
     <Content Include="Content\css\app.css" />
+    <Content Include="Content\css\app1.css" />
     <Content Include="Content\fonts\fa-brands-400.svg" />
     <Content Include="Content\fonts\fa-regular-400.svg" />
     <Content Include="Content\fonts\fa-solid-900.svg" />
@@ -129,7 +131,15 @@
     <Content Include="Content\Images\Carousel\Foto1.jpg" />
     <Content Include="Content\Images\Carousel\Foto2.jpg" />
     <Content Include="Content\Images\Carousel\Foto3.jpg" />
-    <Content Include="Content\Images\Comunicados\image001.png" />
+    <Content Include="Content\Images\Carousel\Foto4.jpg" />
+    <Content Include="Content\Images\Carousel\Foto5.jpg" />
+    <Content Include="Content\Images\Carousel\Foto6.jpg" />
+    <Content Include="Content\Images\Carousel\Foto7.jpg" />
+    <Content Include="Content\Images\Carousel\Foto8.jpg" />
+    <Content Include="Content\Images\Comunicados\Fondos\53-400x400.jpg" />
+    <Content Include="Content\Images\Comunicados\Iconos\signofhealth_medical_10742.png" />
+    <Content Include="Content\Images\Comunicados\image001.jpg" />
+    <Content Include="Content\Images\Comunicados\image002.jpg" />
     <Content Include="Content\Images\COVID\Cuidados.jpg" />
     <Content Include="Content\Images\COVID\lavado.png" />
     <Content Include="Content\Images\COVID\MitosYRealidades1.png" />
@@ -139,8 +149,11 @@
     <Content Include="Content\Images\DashboardSCC\Personal3.jpg" />
     <Content Include="Content\Images\DashboardSCC\Personal4.jpg" />
     <Content Include="Content\Images\Empresa\Brasile.jpg" />
+    <Content Include="Content\Images\Empresa\Comercial\EsctructuraComercial.JPG" />
     <Content Include="Content\Images\Empresa\Guido-Fabbri_Colombia_500x500.png" />
     <Content Include="Content\Images\Empresa\ImgOperaciones\Claro.JPG" />
+    <Content Include="Content\Images\Empresa\ImgOrganigramas\OrganigramaGeneral.JPG" />
+    <Content Include="Content\Images\Empresa\ImgTI\OrganigramaTI.JPG" />
     <Content Include="Content\Images\Empresa\mondo-b.jpg" />
     <Content Include="Content\Images\Empresa\Mondo_900x600_ES.jpg" />
     <Content Include="Content\Images\Empresa\Oscar-Estrada-Arevalo_Colombia.jpg" />
@@ -152,23 +165,53 @@
     <Content Include="Content\Images\Empresa\Sites\Site MED.png" />
     <Content Include="Content\Images\Empresa\team-guzman.jpg" />
     <Content Include="Content\Images\Empresa\vision-b2.jpg" />
+    <Content Include="Content\Images\FotosColaboradores\Foto_1.JPG" />
+    <Content Include="Content\Images\FotosColaboradores\Foto_2.JPG" />
+    <Content Include="Content\Images\GestionDeCalidad\ImgComercial\CalidadComercial.jpg" />
+    <Content Include="Content\Images\GestionDeCalidad\ImgImplementacion\ProcesoImplemetacion.png" />
+    <Content Include="Content\Images\GestionDeCalidad\ImgSGC\SGC.jpg" />
+    <Content Include="Content\Images\GestionHumanna\CulturaGestionHumana.JPG" />
+    <Content Include="Content\Images\GestionHumanna\GestionTalentoHumano.JPG" />
     <Content Include="Content\Images\globos.png" />
+    <Content Include="Content\Images\Iconos\AlmaBiIco.png" />
+    <Content Include="Content\Images\Iconos\ApoloIco.png" />
+    <Content Include="Content\Images\Iconos\BedooIco.png" />
+    <Content Include="Content\Images\Iconos\NovasoftIco.png" />
     <Content Include="Content\Images\Iconos\text.png" />
     <Content Include="Content\Images\Iconos\ubicacion-azul-.jpg" />
+    <Content Include="Content\Images\ImgAreas\ImgNomina\NominaBanner.jpg" />
+    <Content Include="Content\Images\ImgAreas\ImgRecursosHumanos\BienestarYSTBanner.jpg" />
+    <Content Include="Content\Images\ImgAreas\ImgReporting\ReportingReporting.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgAlmaAmbiental\AlmaAmbientalBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgClaro\BannerClaro.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgFichosa\FichosaBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgFortinet\FortinetBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgGrupoAlmaViva\GrupoAlmaVivaBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgHisense\HisenseBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgLatam\LatamBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgQuienesSomos\EstructuraCorporativaBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgQuienesSomos\QuienesSomosBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgQuienesSomos\SiteBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\ImgSamsung\SamsungBanner.jpg" />
+    <Content Include="Content\Images\ImgOperaciones\InfoShopee\ShopeeBanner.jpg" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\Logos\Alma Net_Alma Net_n.png" />
     <Content Include="Content\img\avatars\avatar-2.jpg" />
     <Content Include="Content\img\avatars\avatar-3.jpg" />
     <Content Include="Content\img\avatars\avatar-4.jpg" />
     <Content Include="Content\img\avatars\avatar-5.jpg" />
     <Content Include="Content\img\avatars\avatar.jpg" />
     <Content Include="Content\img\icons\icon-48x48.png" />
-    <Content Include="Content\img\media\AlmaAlcance.jpg" />
-    <Content Include="Content\img\media\AlmaMision.jpg" />
+    <Content Include="Content\img\media\AlmaMisionBanner.jpg" />
     <Content Include="Content\img\media\AlmaVision.jpg" />
+    <Content Include="Content\img\media\globos.png" />
+    <Content Include="Content\img\media\MapaProcesos_Mesa.png" />
+    <Content Include="Content\img\media\MesaDeTrabajo.png" />
     <Content Include="Content\img\photos\unsplash-1.jpg" />
     <Content Include="Content\img\photos\unsplash-2.jpg" />
     <Content Include="Content\img\photos\unsplash-3.jpg" />
     <Content Include="Content\img\screenshot.png" />
+    <Content Include="Content\css\Jodit\jodit.min.css" />
     <Content Include="Content\src\fonts\fa-brands-400.svg" />
     <Content Include="Content\src\fonts\fa-regular-400.svg" />
     <Content Include="Content\src\fonts\fa-solid-900.svg" />
@@ -185,14 +228,34 @@
     <Content Include="COVID\CovidDocumentos.aspx" />
     <Content Include="COVID\Videos\CovidVideo.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="Empresa\EstructuraCorporativa.aspx" />
     <Content Include="Empresa\GrupoAlmaViva.aspx" />
     <Content Include="Empresa\MisionVision.aspx" />
     <Content Include="Empresa\PresenciaGlobal.aspx" />
+    <Content Include="Empresa\QuienesSomos.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="InfoGestionDeCalidad\CalidadAdministrativoYFinanciero.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadComercial.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadFormacion.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadGestionHumana.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadImplementacion.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadInfo.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadOperaciones.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadSGC.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadTecnologia.aspx" />
+    <Content Include="InfoGestionDeCalidad\CalidadWorkforce.aspx" />
     <Content Include="InfoOperaciones\InfoClaro.aspx" />
+    <Content Include="InfoOperaciones\InfoComercial.aspx" />
+    <Content Include="InfoOperaciones\InfoFichosa.aspx" />
+    <Content Include="InfoOperaciones\InfoFortinet.aspx" />
+    <Content Include="InfoOperaciones\InfoHisense.aspx" />
     <Content Include="InfoOperaciones\InfoLATAM.aspx" />
+    <Content Include="InfoAreas\InfoNomina.aspx" />
     <Content Include="InfoOperaciones\InfoSamsung.aspx" />
+    <Content Include="InfoOperaciones\InfoShopee.aspx" />
+    <Content Include="InfoAreas\InfoTI.aspx" />
+    <Content Include="InfoReporting\InfoReporting.aspx" />
     <Content Include="Login\ErrorAutenticacion.aspx" />
     <Content Include="Login\Login.aspx" />
     <Content Include="MiPerfil\MiPerfil.aspx" />
@@ -212,8 +275,12 @@
     <Content Include="Novedades\AprovacionDeNovedades.aspx" />
     <Content Include="Novedades\IngresoDeNovedades.aspx" />
     <Content Include="Empresa\Oficinas.aspx" />
+    <Content Include="RecursosHumanos\BienestarYSST.aspx" />
     <Content Include="RecursosHumanos\DirectorioCorporativo.aspx" />
     <Content Include="RecursosHumanos\Documentacion\Documentacion.aspx" />
+    <Content Include="RecursosHumanos\PoliticaAmbiental.aspx" />
+    <Content Include="RecursosHumanos\SeleccionYContratacion.aspx" />
+    <Content Include="Scripts\jodit\jodit.min.js" />
     <Content Include="Scripts\Jquery\jquery.js" />
     <Content Include="Scripts\Jquery\jquery.min.js" />
     <Content Include="Scripts\js\app.js" />
@@ -241,6 +308,13 @@
     </Compile>
     <Compile Include="400.aspx.designer.cs">
       <DependentUpon>400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AlmaAmbiental\AlmaAmbiental.aspx.cs">
+      <DependentUpon>AlmaAmbiental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AlmaAmbiental\AlmaAmbiental.aspx.designer.cs">
+      <DependentUpon>AlmaAmbiental.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -272,6 +346,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Empresa\EstructuraCorporativa.aspx.cs">
+      <DependentUpon>EstructuraCorporativa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\EstructuraCorporativa.aspx.designer.cs">
+      <DependentUpon>EstructuraCorporativa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Empresa\GrupoAlmaViva.aspx.cs">
       <DependentUpon>GrupoAlmaViva.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -293,8 +374,85 @@
     <Compile Include="Empresa\PresenciaGlobal.aspx.designer.cs">
       <DependentUpon>PresenciaGlobal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Empresa\QuienesSomos.aspx.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Empresa\QuienesSomos.aspx.designer.cs">
+      <DependentUpon>QuienesSomos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadAdministrativoYFinanciero.aspx.cs">
+      <DependentUpon>CalidadAdministrativoYFinanciero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadAdministrativoYFinanciero.aspx.designer.cs">
+      <DependentUpon>CalidadAdministrativoYFinanciero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadComercial.aspx.cs">
+      <DependentUpon>CalidadComercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadComercial.aspx.designer.cs">
+      <DependentUpon>CalidadComercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadFormacion.aspx.cs">
+      <DependentUpon>CalidadFormacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadFormacion.aspx.designer.cs">
+      <DependentUpon>CalidadFormacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadGestionHumana.aspx.cs">
+      <DependentUpon>CalidadGestionHumana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadGestionHumana.aspx.designer.cs">
+      <DependentUpon>CalidadGestionHumana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadImplementacion.aspx.cs">
+      <DependentUpon>CalidadImplementacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadImplementacion.aspx.designer.cs">
+      <DependentUpon>CalidadImplementacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadInfo.aspx.cs">
+      <DependentUpon>CalidadInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadInfo.aspx.designer.cs">
+      <DependentUpon>CalidadInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadOperaciones.aspx.cs">
+      <DependentUpon>CalidadOperaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadOperaciones.aspx.designer.cs">
+      <DependentUpon>CalidadOperaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadSGC.aspx.cs">
+      <DependentUpon>CalidadSGC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadSGC.aspx.designer.cs">
+      <DependentUpon>CalidadSGC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadTecnologia.aspx.cs">
+      <DependentUpon>CalidadTecnologia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadTecnologia.aspx.designer.cs">
+      <DependentUpon>CalidadTecnologia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadWorkforce.aspx.cs">
+      <DependentUpon>CalidadWorkforce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoGestionDeCalidad\CalidadWorkforce.aspx.designer.cs">
+      <DependentUpon>CalidadWorkforce.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoOperaciones\InfoClaro.aspx.cs">
       <DependentUpon>InfoClaro.aspx</DependentUpon>
@@ -303,6 +461,34 @@
     <Compile Include="InfoOperaciones\InfoClaro.aspx.designer.cs">
       <DependentUpon>InfoClaro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InfoOperaciones\InfoComercial.aspx.cs">
+      <DependentUpon>InfoComercial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoComercial.aspx.designer.cs">
+      <DependentUpon>InfoComercial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoFichosa.aspx.cs">
+      <DependentUpon>InfoFichosa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoFichosa.aspx.designer.cs">
+      <DependentUpon>InfoFichosa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoFortinet.aspx.cs">
+      <DependentUpon>InfoFortinet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoFortinet.aspx.designer.cs">
+      <DependentUpon>InfoFortinet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoHisense.aspx.cs">
+      <DependentUpon>InfoHisense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoHisense.aspx.designer.cs">
+      <DependentUpon>InfoHisense.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InfoOperaciones\InfoLATAM.aspx.cs">
       <DependentUpon>InfoLATAM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -310,12 +496,40 @@
     <Compile Include="InfoOperaciones\InfoLATAM.aspx.designer.cs">
       <DependentUpon>InfoLATAM.aspx</DependentUpon>
     </Compile>
+    <Compile Include="InfoAreas\InfoNomina.aspx.cs">
+      <DependentUpon>InfoNomina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoAreas\InfoNomina.aspx.designer.cs">
+      <DependentUpon>InfoNomina.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InfoOperaciones\InfoSamsung.aspx.cs">
       <DependentUpon>InfoSamsung.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoOperaciones\InfoSamsung.aspx.designer.cs">
       <DependentUpon>InfoSamsung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoShopee.aspx.cs">
+      <DependentUpon>InfoShopee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoOperaciones\InfoShopee.aspx.designer.cs">
+      <DependentUpon>InfoShopee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoAreas\InfoTI.aspx.cs">
+      <DependentUpon>InfoTI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoAreas\InfoTI.aspx.designer.cs">
+      <DependentUpon>InfoTI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InfoReporting\InfoReporting.aspx.cs">
+      <DependentUpon>InfoReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InfoReporting\InfoReporting.aspx.designer.cs">
+      <DependentUpon>InfoReporting.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login\ErrorAutenticacion.aspx.cs">
       <DependentUpon>ErrorAutenticacion.aspx</DependentUpon>
@@ -331,6 +545,7 @@
     <Compile Include="Login\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Autenticacion\LoginControlador.cs" />
     <Compile Include="Maill\BaseEmail.cs" />
     <Compile Include="Maill\Email.cs" />
     <Compile Include="MiPerfil\MiPerfil.aspx.cs">
@@ -361,6 +576,9 @@
     <Compile Include="Models\Cargos.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Noticias.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\NovedadesUsuarios.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
@@ -376,6 +594,9 @@
     <Compile Include="Models\Personas.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Requisiciones.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Rhs.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
@@ -385,7 +606,13 @@
     <Compile Include="Models\TipoNovedades.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\TipoRequisiciones.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Usuarios.cs">
+      <DependentUpon>AmbarModelo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\V_AMBAR_USUARIO.cs">
       <DependentUpon>AmbarModelo.tt</DependentUpon>
     </Compile>
     <Compile Include="Notificaciones\Noticias.aspx.cs">
@@ -430,6 +657,13 @@
     <Compile Include="Empresa\Oficinas.aspx.designer.cs">
       <DependentUpon>Oficinas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\BienestarYSST.aspx.cs">
+      <DependentUpon>BienestarYSST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\BienestarYSST.aspx.designer.cs">
+      <DependentUpon>BienestarYSST.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RecursosHumanos\DirectorioCorporativo.aspx.cs">
       <DependentUpon>DirectorioCorporativo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -444,13 +678,30 @@
     <Compile Include="RecursosHumanos\Documentacion\Documentacion.aspx.designer.cs">
       <DependentUpon>Documentacion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RecursosHumanos\PoliticaAmbiental.aspx.cs">
+      <DependentUpon>PoliticaAmbiental.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\PoliticaAmbiental.aspx.designer.cs">
+      <DependentUpon>PoliticaAmbiental.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosHumanos\SeleccionYContratacion.aspx.cs">
+      <DependentUpon>SeleccionYContratacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecursosHumanos\SeleccionYContratacion.aspx.designer.cs">
+      <DependentUpon>SeleccionYContratacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Repositorio\AreaContexto.cs" />
     <Compile Include="Repositorio\CargoContexto.cs" />
     <Compile Include="Repositorio\LoginContexto.cs" />
+    <Compile Include="Repositorio\NoticiaContexto.cs" />
     <Compile Include="Repositorio\NovedadesUsuarioContexto.cs" />
     <Compile Include="Repositorio\OperacionContexto.cs" />
+    <Compile Include="Repositorio\PerfilContexto.cs" />
     <Compile Include="Repositorio\PersonaContexto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\RequisicionContexto.cs" />
     <Compile Include="Repositorio\SiteContexto.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -476,15 +727,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Documentacion\SGC\GestionHumana\Formatos\" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="Models\AmbarModelo.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AmbarModelo.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\AmbarModelo.edmx.diagram">
-      <DependentUpon>AmbarModelo.edmx</DependentUpon>
-    </Content>
     <Content Include="Content\src\fonts\fa-brands-400.eot" />
     <Content Include="Content\src\fonts\fa-brands-400.ttf" />
     <Content Include="Content\src\fonts\fa-brands-400.woff" />
@@ -622,6 +867,122 @@
     <Content Include="Content\fonts\Inter-ThinItalic-BETA.woff2" />
     <Content Include="Content\fonts\Inter-upright.var.woff2" />
     <Content Include="Content\fonts\Inter.var.woff2" />
+    <EntityDeploy Include="Models\AmbarModelo.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AmbarModelo.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\AmbarModelo.edmx.diagram">
+      <DependentUpon>AmbarModelo.edmx</DependentUpon>
+    </Content>
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Procedimientos\Procedimiento Auditorias Internas.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Procedimientos\Procedimiento Control de Documentos Almacontact .pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Procedimientos\Procedimiento NC y Ciclo de Mejoramiento .pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Procedimientos\Procedimiento Salida No conforme.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Procedimientos\Caracterización SGC.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Acta de Reunion Efectiva.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Ficha tecnica de indicadores Almacontact.xlsx" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Caracterizacion Almacontact .pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato de NC y Ciclo de Mejoramiento.xlsm" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Evaluación Auditor.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Informe de auditoria.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Lista de Verificación.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Plan de auditoria.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Planificación del cambio.xlsx" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Formato Salida No Conforme.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Listado Documentos Externos .pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Listado Maestro de Documentos.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Listado Maestro de Registros .pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Matriz de Comunicaciones Almacontact.pdf" />
+    <Content Include="Content\Documentacion\SGC\CalidadSGC\Formatos\Matriz de riesgos y oportunidades.xlsx" />
+    <Content Include="Content\Documentacion\SGC\Comercial\Procedimientos\CARACTERIZACIÓN COMERCIAL.pdf" />
+    <Content Include="Content\Documentacion\SGC\Comercial\Procedimientos\Procedimiento Comercial.pdf" />
+    <Content Include="Content\Documentacion\SGC\Comercial\Procedimientos\PROCEDIMIENTO PQRS ALMACONTACT.pdf" />
+    <Content Include="Content\Documentacion\SGC\Comercial\Formatos\Formato Entrega de Proyecto.pdf" />
+    <Content Include="Content\Documentacion\SGC\Comercial\Formatos\RESUMEN PROYECTO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Workforce\Procedimientos\CARACTERIZACIÓN WORKFORCE MANAGEMENT.pdf" />
+    <Content Include="Content\Documentacion\SGC\Workforce\Procedimientos\PROCEDIMIENTO WORKFORCE MANAGEMENT.pdf" />
+    <Content Include="Content\Documentacion\SGC\Implementacion\Procedimientos\Caracterización de Proceso de Implementación.pdf" />
+    <Content Include="Content\Documentacion\SGC\Implementacion\Procedimientos\Procedimiento de Implementación.pdf" />
+    <Content Include="Content\Documentacion\SGC\Implementacion\Formatos\ACTA CIERRE PROYECTO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Implementacion\Formatos\ACTA ENTREGA PROYECTO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Implementacion\Formatos\LISTA DE REQUERIMIENTOS CONTRACTUALES.xlsx" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroPremiun\Procedimiento Atención  Hogar Backoffice Claro Premium.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroPremiun\Procedimiento Atención Hogar Inbound Claro premium.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroPremiun\Procedimiento Atención Hogar Outbound Claro Premium.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroPremiun\Procedimiento Atención Hogar Whatsapp Claro Premium.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroPremiun\Procedimiento Atención Ventas Claro Premium.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimeinto Celula Operaciones CGO Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimeinto Operación Claro- Ventas.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Atención Hogar Inbound Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Celula Apoyo en Piso Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Celula Detractores Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Celula Soporte Mal Escalados Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Operación Claro - PQR.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Operación Craro Swat- Ajustes.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroSwat\Procedimiento Operación Reincidente y Recurrentes Claro Swat.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroTMK\PROCEDIMIENTO CLARO TMK - HOGAR.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroTMK\PROCEDIMIENTO CLARO TMK - MOVIL MIGRACIÓN .pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroTMK\PROCEDIMIENTO CLARO TMK - MOVIL PORTABILIDAD.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\ClaroTMK\PROCEDIMIENTO CLARO TMK TYT OUT.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento Latam Cargo Customer Care.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento Latam Cargo.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento No Voz.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento Operación Ventas_Latam.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento Operación Voz.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\LATAM\Procedimiento Servicing B2B.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - ADMINISTRADOR SALESFORCE.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - B2B.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - CAMBIOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - CANCELACIONES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - DEALERS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - GARANTÌAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - RISK.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - SUPPORT SPECIAL TRACKING &amp; ASIGNACIONES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - VENDOR.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Samsung\Procedimiento Operaciòn SAMSUNG - VOC SIC.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACION SIP CS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACIÓN CATÁLOGO .pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACIÓN CS  RRSS TARGET.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACIÓN EMAIL CS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACIÓN SHOPEE CHAT.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operaciones\Shopee\PROCEDIMIENTO OPERACIÓN SHOPEE DISPUTAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\CARACTERIZACIÓN GESTIÓN HUMANA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\EV DESEMPEÑO 2021 - METODOLOGIA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Manual Del Comité De Convivencia Laboral.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Manual Del Sistema De Gestión De Seguridad Y Salud En El Trabajo.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Organigrama V2 - 8 Febrero 2022_.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Plan De Emergencia Almacontact.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Política De Prevención Al Consumo De Alcohol, Tabaco Y Drogas - Política De Seguridad Y Salud En El Trabajo - Politica de Higiene y Seguridad en.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO CONTRATACIÓN.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO DE SELECCIÓN.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Procedimiento Gestión Del Cambio.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO NOMINA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Procedimiento Para La Identificación De Peligros, Evaluación Y Valoración De Riesgos Y Establecimiento De Controles.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Procedimiento Plan Carrera.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO RELACIONES LABORALES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Operacion\Procedimiantos\CARACTERIZACIÓN DE OPERACIONES %281%29.xlsx" />
+    <Content Include="Content\Documentacion\SGC\Operacion\Procedimiantos\FORMATO GESTIÓN DE OPERACIÓN.docx" />
+    <Content Include="Content\Documentacion\SGC\Operacion\Formatos\FORMATO GESTIÓN DE OPERACIÓN.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Acta de Contenidos CLARO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Acta de Contenidos y Cronograma LATAM.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Acta Entrega de Usuarios.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Formato compromiso de Mejora.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Formato Entrega Kit.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Formato Estoy Enterado.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Formatos\Formato Feedback Nesting.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Procedimientos\Formato Caracterización Formación.pdf" />
+    <Content Include="Content\Documentacion\SGC\Formacion\Procedimientos\Procedimiento Formación.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Procedimientos\CARACTERIZACION CALIDAD.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Procedimientos\PROCEDIMIENTO CALIDAD.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO ASISTENCIA A DIALOGO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO ASISTENCIA CALIBRACIÓN INTERNA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO DE ALERTA EJECUCIÓN.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO DE ALERTA INTRASABLE.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO DE ALERTA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO ESTOY ENTERADO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO RETROALIMENTACION CALIDAD.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO ROLE PLAY.pdf" />
+    <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO VIERNES DE RETO.pdf" />
     <None Include="packages.config" />
     <Content Include="Scripts\js\app.js.LICENSE" />
     <Content Include="Scripts\js\app.js.map" />

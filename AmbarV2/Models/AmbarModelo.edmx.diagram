@@ -4,25 +4,29 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8b5fd6a615f74624adb440289d5a0f72" Name="Diagram1">
-        <EntityTypeShape EntityType="AMBARModel.Areas" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Cargos" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Operaciones" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Perfiles" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Permisos" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Rhs" Width="1.5" PointX="0.5" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Sites" Width="1.5" PointX="3" PointY="17" IsExpanded="true" />
-        <EntityTypeShape EntityType="AMBARModel.Usuarios" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Usuairos_dbo_Perfiles_idRh" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="AMBARModel.TipoNovedades" Width="1.5" PointX="9.375" PointY="4.75" />
-        <EntityTypeShape EntityType="AMBARModel.Personas" Width="1.5" PointX="5.375" PointY="2.875" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Areas_id" />
-        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" />
+      <Diagram DiagramId="c0c8af41f7154027abde5f07a3714813" Name="Diagram1">
+        <EntityTypeShape EntityType="AMBARModel.Areas" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.Cargos" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.NovedadesUsuarios" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.Perfiles" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.Personas" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.TipoNovedades" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.TipoRequisiciones" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AMBARModel.V_AMBAR_USUARIO" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Areas_id" ManuallyRouted="false" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Cargos_id" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AMBARModel.Operaciones" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="AMBARModel.Rhs" Width="1.5" PointX="0.75" PointY="10.125" />
         <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Operaciones_id" />
         <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Rhs_idRh" />
+        <EntityTypeShape EntityType="AMBARModel.Permisos" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="AMBARModel.Sites" Width="1.5" PointX="0.75" PointY="12.875" />
         <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Sites_id" />
+        <EntityTypeShape EntityType="AMBARModel.Requisiciones" Width="1.5" PointX="7.5" PointY="7.875" />
+        <EntityTypeShape EntityType="AMBARModel.Noticias" Width="1.5" PointX="12.375" PointY="4.75" />
+        <EntityTypeShape EntityType="AMBARModel.Usuarios" Width="1.5" PointX="3.125" PointY="5.5" />
+        <AssociationConnector Association="AMBARModel.FK_dbo_Usuairos_dbo_Perfiles_idRh" />
         <AssociationConnector Association="AMBARModel.FK_dbo_Personas_dbo_Usuarios_id" />
-        <EntityTypeShape EntityType="AMBARModel.NovedadesUsuarios" Width="1.5" PointX="7.375" PointY="4.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

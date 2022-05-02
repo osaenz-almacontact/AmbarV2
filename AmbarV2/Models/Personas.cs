@@ -60,6 +60,7 @@ namespace AmbarV2.Models
         public Nullable<int> SubBu { get; set; }
         public int IdPosting { get; set; }
         public int IdUsuario { get; set; }
+        public string Status { get; set; }
     
         public virtual Areas Areas { get; set; }
         public virtual Cargos Cargos { get; set; }
