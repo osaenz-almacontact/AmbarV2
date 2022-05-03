@@ -90,8 +90,6 @@ namespace AmbarV2.Login
                     //return RedirectToAction("Profile");
             }
 
-            //ViewBag.Message = message;
-            //return View(user);
         }
     }
 }
