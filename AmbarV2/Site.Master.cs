@@ -1,9 +1,9 @@
-﻿using AmbarV2.Models;
+﻿using AmbarV2.Autenticacion;
+using AmbarV2.Models;
 using AmbarV2.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,14 +14,15 @@ namespace AmbarV2
     {
         //string EmployeeLogin = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
-        #region Contextos
+        #region Variables
 
-        string EmployeeLogin = "oscarord";
-        LoginContexto contextoUsuarios = new LoginContexto();
-        AreaContexto contextoAreas = new AreaContexto();
-        OperacionContexto contextoOperaciones = new OperacionContexto();
-        CargoContexto contextoCargos = new CargoContexto();
-        SiteContexto contextoSites = new SiteContexto();
+        //string EmployeeLogin = "oscarord";
+        string EmployeeLogin = "jgarcia";
+        int IdPefil = 0;
+        Boolean returnError = false;
+        //string EmployeeLogin = "wvaldes";
+        //string EmployeeLogin = "oscarord";
+
 
         #endregion
 
@@ -29,24 +30,49 @@ namespace AmbarV2
         {
             try
             {
-                if (!this.Page.User.Identity.IsAuthenticated)
+                if (!IsPostBack)
                 {
-                    //FormsAuthentication.RedirectToLoginPage();
-                    Login();
-                }
-                else
-                {
-                    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
-                    //{
-                    //    FormsAuthentication.RedirectToLoginPage();
-                    //}
-                    //else
-                    //{
-                    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
-                    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
-                    //     = NombresYApellidos;
+                    if (!this.Page.User.Identity.IsAuthenticated)
+                    {
+                        FormsAuthentication.RedirectToLoginPage();                        
+                    }
+                    else
+                    {
+                        if ( (string)Session["Nombres"] == null)
+                        {
+                            ////LoginControlador LoginControl = new LoginControlador();
+                            ////if (LoginControl.LoginAutenticacion(EmployeeLogin, ref returnError) == "")
+                            ////{
+                            ////    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
+                            ////    //{
+                            ////    //    FormsAuthentication.RedirectToLoginPage();
+                            ////    //}
+                            ////    //else
+                            ////    //{
+                            ////    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
+                            ////    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
+                            ////    //     = NombresYApellidos;
 
-                    //}
+                            ////}
+                            //Login();
+                            Response.Redirect(@"\Login\ErrorAutenticacion.aspx");
+                        }
+                        else
+                        {
+                            LabNombres.Text = Session["Nombres"].ToString();
+                            if(Session["IdPerfil"].ToString() == "6")
+                            {
+                                LiAprovacionDeNovedades.Visible = true;
+                            }
+                            else
+                            {
+                                LiAprovacionDeNovedades.Visible = false;
+                            }
+                        }
+                        
+
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -56,6 +82,12 @@ namespace AmbarV2
         }
         public void Login()
         {
+            LoginContexto contextoUsuarios = new LoginContexto();
+            AreaContexto contextoAreas = new AreaContexto();
+            OperacionContexto contextoOperaciones = new OperacionContexto();
+            CargoContexto contextoCargos = new CargoContexto();
+            SiteContexto contextoSites = new SiteContexto();
+
             List<Usuarios> ListUsuarios = contextoUsuarios.ConsultarUsuarios();
             List<Perfiles> ListPerfiles = contextoUsuarios.ConsusltarPerfiles();
             List<Personas> ListPersonas = contextoUsuarios.ObtenerDatosPersona();
@@ -65,23 +97,26 @@ namespace AmbarV2
             List<Sites> ListSite = contextoSites.ObtenerSites();
 
             var query = (from Persona in ListPersonas
-                         join Area in ListAreas on Persona.idArea equals Area.Id
-                         join Operacion in ListOperaciones on Persona.idOperacion equals Operacion.Id
+                         join Area in ListAreas on Persona.IdArea equals Area.Id
+                         join Operacion in ListOperaciones on Persona.IdOperacion equals Operacion.Id
                          join Cargo in ListCargos on Persona.IdCargo equals Cargo.Id
                          join Site in ListSite on Persona.IdSite equals Site.Id
-                         join Usuario in ListUsuarios on Persona.idUsuario equals Usuario.Id
-                         join Perfil in ListPerfiles on Usuario.IdPerfil equals Perfil.Id
+                         join Usuario in ListUsuarios on Persona.IdUsuario equals Usuario.Id
+                         join Perfil in ListPerfiles on Usuario.IdPerfilAlmaNet equals Perfil.Id
                          where Usuario.Login == EmployeeLogin
                          select new
                          {
-                             Nombres = Persona.primerApellido + ' ' + Persona.nombres,
-                             Operacion =Operacion.Nombre,
+                             IdPersona = Persona.Id,
+                             IdUsuario = Usuario.Id,
+                             Nombres = Persona.PrimerApellido + ' ' + Persona.Nombres,
+                             Operacion = Operacion.Nombre,
                              Area = Area.Nombre,
                              Cargo = Cargo.Nombre,
                              Site = Site.Nombre,
                              EstadoUsuairo = Perfil.Estado,
                              Perfil = Perfil.Nombre,
-                             IdPerfil = Perfil.Id
+                             IdPerfil = Perfil.Id,
+                             Foto = Persona.FotoURL
                          }).ToList();
 
             var Retorno = query.Find(x => x.EstadoUsuairo.HasValue);
@@ -95,6 +130,8 @@ namespace AmbarV2
                     if (Retorno.EstadoUsuairo == 1)
                     {
                         LabNombres.Text = Retorno.Nombres.ToString();
+                        Session["IdPersona"] = Retorno.IdPersona.ToString();
+                        Session["IdUsuario"] = Retorno.IdUsuario.ToString();
                         Session["Nombres"] = Retorno.Nombres.ToString();
                         Session["Operacion"] = Retorno.Operacion.ToString();
                         Session["Area"] = Retorno.Area.ToString();
@@ -103,6 +140,7 @@ namespace AmbarV2
                         Session["Estado"] = Retorno.EstadoUsuairo.ToString();
                         Session["Perfil"] = Retorno.Perfil.ToString();
                         Session["IdPerfil"] = Retorno.IdPerfil.ToString();
+                        Session["NT"] = EmployeeLogin;
                         //FormsAuthentication.RedirectFromLoginPage(TxtUsuario.Value, true);
                         break;
                     }
@@ -116,7 +154,11 @@ namespace AmbarV2
                     //FormsAuthentication.SetAuthCookie(user.Username, user.RememberMe);
                     //return RedirectToAction("Profile");
             }
+
+            
         }
+
+        
 
     }
 }

@@ -14,52 +14,53 @@ namespace AmbarV2.Models
     
     public partial class Personas
     {
-        public int PersonaId { get; set; }
-        public string primerApellido { get; set; }
-        public string segundoApellido { get; set; }
-        public string nombres { get; set; }
-        public string cedula { get; set; }
-        public System.DateTime fechaDeNacimiento { get; set; }
-        public string lugarDeNacimiento { get; set; }
-        public string sexo { get; set; }
+        public int Id { get; set; }
+        public string PrimerApellido { get; set; }
+        public string SegundoApellido { get; set; }
+        public string Nombres { get; set; }
+        public string Cedula { get; set; }
+        public System.DateTime FechaDeNacimiento { get; set; }
+        public string LugarDeNacimiento { get; set; }
+        public string Sexo { get; set; }
         public string EstadoCivil { get; set; }
-        public Nullable<int> idRh { get; set; }
-        public string eps { get; set; }
-        public string direccionResidencia { get; set; }
-        public string barrio { get; set; }
-        public string telefono { get; set; }
-        public string celular { get; set; }
-        public string correo { get; set; }
-        public string personaDeEmergencia { get; set; }
-        public string telefonoDeEmergencia { get; set; }
-        public Nullable<System.DateTime> fechaIngreso { get; set; }
-        public Nullable<int> idOperacion { get; set; }
-        public Nullable<int> idArea { get; set; }
+        public Nullable<int> IdRh { get; set; }
+        public string Eps { get; set; }
+        public string DireccionResidencia { get; set; }
+        public string Barrio { get; set; }
+        public string Telefono { get; set; }
+        public string Celular { get; set; }
+        public string Correo { get; set; }
+        public string PersonaDeEmergencia { get; set; }
+        public string TelefonoDeEmergencia { get; set; }
+        public Nullable<System.DateTime> FechaIngreso { get; set; }
+        public Nullable<int> IdOperacion { get; set; }
+        public Nullable<int> IdArea { get; set; }
         public Nullable<int> IdCargo { get; set; }
         public Nullable<int> IdSite { get; set; }
-        public Nullable<int> nombreTipoContrato { get; set; }
-        public Nullable<int> nombreTipoCosto { get; set; }
+        public Nullable<int> NombreTipoContrato { get; set; }
+        public Nullable<int> NombreTipoCosto { get; set; }
         public Nullable<int> Salario { get; set; }
-        public Nullable<int> supervisorOperativo { get; set; }
-        public Nullable<byte> trabajaFestivos { get; set; }
-        public Nullable<int> carneDeSitel { get; set; }
-        public Nullable<byte> parkEdificio { get; set; }
-        public string marcaCarro { get; set; }
-        public string colorCarro { get; set; }
-        public string placaCarro { get; set; }
+        public Nullable<int> SupervisorOperativo { get; set; }
+        public Nullable<byte> TrabajaFestivos { get; set; }
+        public Nullable<int> CarneDeSitel { get; set; }
+        public Nullable<byte> ParkEdificio { get; set; }
+        public string MarcaCarro { get; set; }
+        public string ColorCarro { get; set; }
+        public string PlacaCarro { get; set; }
         public Nullable<int> NoParkPin { get; set; }
-        public string fotoURL { get; set; }
-        public Nullable<System.DateTime> fechaRetiro { get; set; }
-        public Nullable<int> razonRetiro { get; set; }
-        public Nullable<System.DateTime> dateLastUpdate { get; set; }
-        public string actualizado { get; set; }
-        public Nullable<int> numeroEmpleado { get; set; }
-        public string emailCorporativo { get; set; }
-        public string puestoNo { get; set; }
-        public Nullable<int> extFisica { get; set; }
-        public Nullable<int> subBu { get; set; }
-        public int idPosting { get; set; }
-        public int idUsuario { get; set; }
+        public string FotoURL { get; set; }
+        public Nullable<System.DateTime> FechaRetiro { get; set; }
+        public Nullable<int> RazonRetiro { get; set; }
+        public Nullable<System.DateTime> DateLastUpdate { get; set; }
+        public string Actualizado { get; set; }
+        public Nullable<int> NumeroEmpleado { get; set; }
+        public string EmailCorporativo { get; set; }
+        public string PuestoNo { get; set; }
+        public Nullable<int> ExtFisica { get; set; }
+        public Nullable<int> SubBu { get; set; }
+        public int IdPosting { get; set; }
+        public int IdUsuario { get; set; }
+        public string Status { get; set; }
     
         public virtual Areas Areas { get; set; }
         public virtual Cargos Cargos { get; set; }

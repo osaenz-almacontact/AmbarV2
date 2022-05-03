@@ -10,9 +10,13 @@
     <title><%: Page.Title %> - Home Page</title>
 
     <link href="Content/css/app.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <script src="/Scripts/Jquery/jquery.js"></script>
+    <script src="/Scripts/Jquery/jquery.js"></script>
+    <script src="/Scripts/Jquery/jquery.min.js"></script>
+    <script src="/Scripts/src/js/modules/bootstrap.js"></script>
     <!-- LOGO HEADER END-->
     <form runat="server">
         <div class="wrapper">
@@ -20,7 +24,8 @@
             <nav id="sidebar" class="sidebar">
                 <div class="sidebar-content js-simplebar">
                     <a class="sidebar-brand" href="/#">
-                        <span class="align-middle">Alma-Net</span>
+                        <span class="align-middle">
+                            <img src="/Content/Images/Logos/Alma%20Net_Alma%20Net_n.png" style="max-height: 40px" /></span>
                     </a>
 
                     <ul class="sidebar-nav">
@@ -33,45 +38,148 @@
                             </a>
                         </li>
 
-                        <li><a href="simple_page.html">Nomina</a></li>
+                        <%--<li><a href="simple_page.html">Nomina</a></li>--%>
 
                         <%-- <li class="sidebar-header">Tools & Components
                         </li>--%>
+
                         <li class="sidebar-item">
                             <a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
                                 <i class="align-middle" data-feather="briefcase"></i><span class="align-middle">Empresa</span>
                             </a>
                             <ul id="ui" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/MisionVision.aspx">Visión y equipo</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/Oficinas.aspx">Oficinas</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Mapa de procesos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/QuienesSomos.aspx">Quienes somos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/MisionVision.aspx">Visión y visión</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/GrupoAlmaViva.aspx">Grupo AlmavivA</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/PresenciaGlobal.aspx">Presencia global</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/EstructuraCorporativa.aspx">Estructura corporativa</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Empresa/Oficinas.aspx">Oficinas</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/DirectorioCorporativo.aspx">Directorio corporativo</a></li>
                             </ul>
                         </li>
-                        <li class="sidebar-item" runat="server">
-                            <a class="sidebar-link" href="/#">
-                                <i class="align-middle" data-feather="bell"></i><span class="align-middle">Notificaciones</span>
+                        
+                        <li class="sidebar-item">
+                            <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="users"></i><span class="align-middle">Gestion Humana</span>
+                            </a>
+                            <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/SeleccionYContratacion.aspx">Selección y Contratación</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/BienestarYSST.aspx">Bienestar Y SST</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoAreas/InfoNomina.aspx">Nomina</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Relaciones Laborales</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">COPASSO</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Brigadistas</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Organigrama</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/Documentacion/Documentacion.aspx">Documetacion</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/PoliticaAmbiental.aspx">Política ambiental</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Novedades/IngresoDeNovedades.aspx">Novedades</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" id="LiAprovacionDeNovedades" href="Novedades/AprovacionDeNovedades.aspx">Aprovacion Novedades</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#calidad" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="check-circle"></i><span class="align-middle">SGC</span>
+                            </a>
+                            <ul id="calidad" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadComercial.aspx">Comercial</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadImplementacion.aspx">Implementación</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadWorkforce.aspx">Workforce management</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadOperaciones.aspx">Operaciones</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadFormacion.aspx">Formación</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadInfo.aspx">Calidad</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadGestionHumana.aspx">Gestión Humana</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadTecnologia.aspx">Tecnología</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadAdministrativoYFinanciero.aspx">Administrativo y financiero</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoGestionDeCalidad/CalidadSGC.aspx">Políticas y procesos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Reporting</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/AlmaAmbiental/AlmaAmbiental.aspx">
+                                <i class="align-middle" data-feather="feather"></i><span class="align-middle">Alma Ambiental</span>
                             </a>
                         </li>
 
                         <li class="sidebar-item">
-                            <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-                                <i class="align-middle" data-feather="users"></i><span class="align-middle">Human Resources</span>
+                            <a href="#financiero" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="dollar-sign"></i><span class="align-middle">Financiero e infraestructura</span>
                             </a>
-                            <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                                <li class="sidebar-item"><a class="sidebar-link" href="#">Brigadistas</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" href="#">Entrenamiento</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" href="#">Organigrama</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/Documentacion/Documentacion.aspx">Documetacion</a></li>
+                            <ul id="financiero" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" href="#">Info</a></li>
                             </ul>
                         </li>
+
+                        <li class="sidebar-item">
+                            <a href="#ti" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="cpu"></i><span class="align-middle">IT</span>
+                            </a>
+                            <ul id="ti" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoAreas/InfoTI.aspx ">Info</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#operaciones" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="aperture"></i><span class="align-middle">Operaciones</span>
+                            </a>
+                            <ul id="operaciones" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoClaro.aspx">Claro</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoLATAM.aspx">LATAM</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoSamsung.aspx">Samsung</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoFortinet.aspx">Fortinet</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoHisense.aspx">Hisense</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoFichosa.aspx">Ficohsa</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoShopee.aspx">Shopee</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#reporting" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="file-text"></i><span class="align-middle">Reporting</span>
+                            </a>
+                            <ul id="reporting" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoReporting/InfoReporting.aspx">Info</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#WFM" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="layers"></i><span class="align-middle">WFM</span>
+                            </a>
+                            <ul id="WFM" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Claro</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">LATAM</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#Comercial" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="shopping-cart"></i><span class="align-middle">Comercial</span>
+                            </a>
+                            <ul id="Comercial" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="InfoOperaciones/InfoComercial.aspx">Info</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a href="#Formacion" data-toggle="collapse" class="sidebar-link collapsed">
+                                <i class="align-middle" data-feather="list"></i><span class="align-middle">Formación</span>
+                            </a>
+                            <ul id="Formacion" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="#">Info</a></li>
+                            </ul>
+                        </li>
+
 
                         <li class="sidebar-item">
                             <a href="#cov" data-toggle="collapse" class="sidebar-link collapsed">
                                 <i class="align-middle" data-feather="thermometer"></i><span class="align-middle">COVID-19</span>
                             </a>
                             <ul id="cov" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/Videos/CovidVideo.aspx">Videos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/Videos/CovidVideo.aspx">Información </a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/COVID/CovidDocumentos.aspx">Documentación</a></li>
                             </ul>
                         </li>
@@ -86,8 +194,6 @@
 
                 </div>
             </nav>
-
-
 
             <div class="main">
                 <nav class="navbar navbar-expand navbar-light navbar-bg">
@@ -112,12 +218,12 @@
                                 <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="bell"></i>
-                                        <span class="indicator">4</span>
+                                        <span class="indicator">1</span>
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right py-0" aria-labelledby="alertsDropdown">
                                     <div class="dropdown-menu-header">
-                                        4 New Notifications
+                                        Certificaciones pendientes
                                     </div>
                                     <div class="list-group">
                                         <a href="#" class="list-group-item">
@@ -126,13 +232,12 @@
                                                     <i class="text-danger" data-feather="alert-circle"></i>
                                                 </div>
                                                 <div class="col-10">
-                                                    <div class="text-dark">Update completed</div>
-                                                    <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
-                                                    <div class="text-muted small mt-1">30m ago</div>
+                                                    <div class="text-dark">Certificacion SAGRILAF</div>
+                                                    <div class="text-muted small mt-1">en 5 dias</div>
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="#" class="list-group-item">
+                                        <%--<a href="#" class="list-group-item">
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-2">
                                                     <i class="text-warning" data-feather="bell"></i>
@@ -166,14 +271,16 @@
                                                     <div class="text-muted small mt-1">14h ago</div>
                                                 </div>
                                             </div>
-                                        </a>
+                                        </a>--%>
                                     </div>
                                     <div class="dropdown-menu-footer">
                                         <a href="#" class="text-muted">Show all notifications</a>
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
+
+                            <!--------MENSAGES----->
+                            <%--<li class="nav-item dropdown">
                                 <a class="nav-icon dropdown-toggle" href="#" id="messagesDropdown" data-toggle="dropdown">
                                     <div class="position-relative">
                                         <i class="align-middle" data-feather="message-square"></i>
@@ -239,14 +346,14 @@
                                         <a href="#" class="text-muted">Show all messages</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li>--%>
                             <li class="nav-item dropdown">
                                 <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-toggle="dropdown">
                                     <i class="align-middle" data-feather="settings"></i>
                                 </a>
 
                                 <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-toggle="dropdown">
-                                    <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded mr-1" alt="Charles Hall" />
+                                    <img src='<%#Eval("Foto") %>' class="avatar img-fluid rounded mr-1" />
                                     <span class="text-dark">
                                         <asp:Label ID="LabNombres" runat="server" Font-Size="15px" Text="Nombres y apellidos"></asp:Label></span>
                                 </a>
@@ -302,8 +409,11 @@
         </div>
 
     </form>
-    <script src="/Scripts/js/vendor.js"></script>
+
+    <%--<script src="/Scripts/js/vendor.js"></script>--%>
+    <%--<script src="/Scripts/js/app.js"></script>--%>
     <script src="/Scripts/js/app.js"></script>
+    <%--<script src="../Scripts/js/app.js"></script>--%>
     <%--<script src="/Scripts/jquery/jquery.js"></script>
     <script src="/Scripts/jquery/jquery.min.js"></script>
     <script src="/Scripts/bootstrap.bundle.min.js"></script>
@@ -313,5 +423,31 @@
     <script src="/Scripts/JS/transition.js"></script>
     <script src="/Scripts/JS/owl-carousel.js"></script>
     <script src="/Scripts/JS/custom.js"></script>--%>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("datetimepicker-dashboard").flatpickr({
+                inline: true,
+                prevArrow: "<span class=\"fas fa-chevron-left\" title=\"Previous month\"></span>",
+                nextArrow: "<span class=\"fas fa-chevron-right\" title=\"Next month\"></span>",
+            });
+        });
+    </script>
+
+    <!-----Jodit Editor de texto---->
+    <link href="/Content/css/Jodit/jodit.min.css" rel="stylesheet" />
+    <script src="/Scripts/jodit/jodit.min.js"></script>
+    <script>new Jodit('#jodit', {
+            uploader: {
+                url: 'jodit-connectors/index.php?action=upload'
+            },
+            filebrowser: {
+                ajax: {
+                    url: 'jodit-connectors/index.php'
+                },
+            }
+        });</script>
+
 </body>
 </html>

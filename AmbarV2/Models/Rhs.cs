@@ -20,8 +20,8 @@ namespace AmbarV2.Models
             this.Personas = new HashSet<Personas>();
         }
     
-        public int idRh { get; set; }
-        public string nombreRh { get; set; }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Personas> Personas { get; set; }

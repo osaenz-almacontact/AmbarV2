@@ -27,6 +27,7 @@ namespace AmbarV2.Models
         public Nullable<System.DateTime> FechaActualizacion { get; set; }
         public Nullable<int> Estado { get; set; }
         public Nullable<int> IdPerfil { get; set; }
+        public Nullable<int> IdPerfilAlmaNet { get; set; }
     
         public virtual Perfiles Perfiles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

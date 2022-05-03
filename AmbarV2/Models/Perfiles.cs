@@ -24,6 +24,7 @@ namespace AmbarV2.Models
         public string Nombre { get; set; }
         public Nullable<int> Estado { get; set; }
         public string FechaCreacion { get; set; }
+        public string Aplicacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Usuarios> Usuarios { get; set; }

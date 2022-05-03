@@ -23,6 +23,7 @@ namespace AmbarV2.Models
         public int Id { get; set; }
         public string Nombre { get; set; }
         public Nullable<int> Estado { get; set; }
+        public Nullable<int> IdTipoOperacion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Personas> Personas { get; set; }
