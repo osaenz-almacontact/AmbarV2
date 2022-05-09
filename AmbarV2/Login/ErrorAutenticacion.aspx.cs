@@ -10,44 +10,73 @@ namespace AmbarV2.Login
 {
     public partial class ErrorAutenticacion : System.Web.UI.Page
     {
-        //string EmployeeLogin = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+        string EmployeeLogin = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
 
         #region Variables
 
         //string EmployeeLogin = "oscarord";
-        string EmployeeLogin = "jgarcia";
+        //string EmployeeLogin = "jgarcia";
         #endregion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            PersonaContexto personaContexto = new PersonaContexto();
-            LoginContexto loginContexto = new LoginContexto();
-            PerfilContexto perfilContexto = new PerfilContexto();
+            LoginContexto contextoUsuarios = new LoginContexto();
+            AreaContexto contextoAreas = new AreaContexto();
+            OperacionContexto contextoOperaciones = new OperacionContexto();
+            CargoContexto contextoCargos = new CargoContexto();
+            SiteContexto contextoSites = new SiteContexto();
 
-            List<Usuarios> ListUsuarios = loginContexto.ConsultarUsuarios();
-            List<Perfiles> ListPerfiles = perfilContexto.ObtenerPerfiles();
-            List<Personas> ListPersonas = personaContexto.ObtenerPersonas();
+            List<Usuarios> ListUsuarios = contextoUsuarios.ConsultarUsuarios();
+            List<Perfiles> ListPerfiles = contextoUsuarios.ConsusltarPerfiles();
+            List<Personas> ListPersonas = contextoUsuarios.ObtenerDatosPersona();
+            List<Areas> ListAreas = contextoAreas.ObtenerAreas();
+            List<Operaciones> ListOperaciones = contextoOperaciones.ObtenerOperaciones();
+            List<Cargos> ListCargos = contextoCargos.ObtenerCargos();
+            List<Sites> ListSite = contextoSites.ObtenerSites();
 
             var query = (from Persona in ListPersonas
-                         join Usuario in ListUsuarios
-                         on Persona.IdUsuario equals Usuario.Id
-                         where Usuario.Login == EmployeeLogin
+                         join Area in ListAreas on Persona.IdArea equals Area.Id
+                         join Operacion in ListOperaciones on Persona.IdOperacion equals Operacion.Id
+                         join Cargo in ListCargos on Persona.IdCargo equals Cargo.Id
+                         join Site in ListSite on Persona.IdSite equals Site.Id
+                         join Usuario in ListUsuarios on Persona.IdUsuario equals Usuario.Id
+                         join Perfil in ListPerfiles on Usuario.IdPerfilAlmaNet equals Perfil.Id
+                         where Usuario.Login.Replace("\\\\", "\\") == EmployeeLogin
                          select new
                          {
+                             IdPersona = Persona.Id,
+                             IdUsuario = Usuario.Id,
                              Nombres = Persona.PrimerApellido + ' ' + Persona.Nombres,
-                             Estado = Usuario.Estado
+                             Operacion = Operacion.Nombre,
+                             Area = Area.Nombre,
+                             Cargo = Cargo.Nombre,
+                             Site = Site.Nombre,
+                             EstadoUsuairo = Perfil.Estado,
+                             Perfil = Perfil.Nombre,
+                             IdPerfil = Perfil.Id,
+                             Foto = Persona.FotoURL
                          }).ToList();
 
-            var Reetorno = query.Find(x => x.Estado.HasValue);
+            var Retorno = query.Find(x => x.EstadoUsuairo.HasValue);
             switch (query.Count)
             {
                 case 0:
                     //LabMensaje.Text = "Username and/or password is incorrect.";
                     break;
                 case 1:
-                    if (Reetorno.Estado == 1)
+                    if (Retorno.EstadoUsuairo == 1)
                     {
-                        Session["Nombres"] = Reetorno.Nombres.ToString();
+                        Session["IdPersona"] = Retorno.IdPersona.ToString();
+                        Session["IdUsuario"] = Retorno.IdUsuario.ToString();
+                        Session["Nombres"] = Retorno.Nombres.ToString();
+                        Session["Operacion"] = Retorno.Operacion.ToString();
+                        Session["Area"] = Retorno.Area.ToString();
+                        Session["Cargo"] = Retorno.Cargo.ToString();
+                        Session["Site"] = Retorno.Site.ToString();
+                        Session["Estado"] = Retorno.EstadoUsuairo.ToString();
+                        Session["Perfil"] = Retorno.Perfil.ToString();
+                        Session["IdPerfil"] = Retorno.IdPerfil.ToString();
+                        Session["NT"] = EmployeeLogin;
                         FormsAuthentication.RedirectFromLoginPage(EmployeeLogin, true);
                         break;
                     }
@@ -61,8 +90,6 @@ namespace AmbarV2.Login
                     //return RedirectToAction("Profile");
             }
 
-            //ViewBag.Message = message;
-            //return View(user);
         }
     }
 }

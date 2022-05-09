@@ -40,21 +40,22 @@ namespace AmbarV2
                     {
                         if ( (string)Session["Nombres"] == null)
                         {
-                            //LoginControlador LoginControl = new LoginControlador();
-                            //if (LoginControl.LoginAutenticacion(EmployeeLogin, ref returnError) == "")
-                            //{
-                            //    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
-                            //    //{
-                            //    //    FormsAuthentication.RedirectToLoginPage();
-                            //    //}
-                            //    //else
-                            //    //{
-                            //    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
-                            //    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
-                            //    //     = NombresYApellidos;
-                            
-                            //}
-                            Login();
+                            ////LoginControlador LoginControl = new LoginControlador();
+                            ////if (LoginControl.LoginAutenticacion(EmployeeLogin, ref returnError) == "")
+                            ////{
+                            ////    //if ((string)Session["Nombres"] == "" || (string)Session["Nombres"] == null)
+                            ////    //{
+                            ////    //    FormsAuthentication.RedirectToLoginPage();
+                            ////    //}
+                            ////    //else
+                            ////    //{
+                            ////    //    string NombresYApellidos = Convert.ToString(Session["Nombres"]);
+                            ////    //    int TipoUsuario = Convert.ToInt32(Session["TipoUsuario"]);
+                            ////    //     = NombresYApellidos;
+
+                            ////}
+                            //Login();
+                            Response.Redirect(@"\Login\ErrorAutenticacion.aspx");
                         }
                         else
                         {
