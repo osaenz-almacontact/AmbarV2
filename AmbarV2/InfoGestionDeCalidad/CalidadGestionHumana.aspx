@@ -176,7 +176,7 @@
                                     <td class="table-action">
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
-                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/Política%20De%20Prevención%20Al%20Consumo%20De%20Alcohol,%20Tabaco%20Y%20Drogas%20-%20Política%20De%20Seguridad%20Y%20Salud%20En%20El%20Trabajo%20-%20Politica%20de%20Higiene%20y%20Seguridad%20en.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/PolíticaDePrevenciónAlConsumoDeAlcohol-TabacoYDrogas-SeguridadYSaludEnElTrabajo-HigieneySeguridad.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -186,7 +186,7 @@
                                     <td class="table-action">
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
-                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/Política%20De%20Prevención%20Al%20Consumo%20De%20Alcohol,%20Tabaco%20Y%20Drogas%20-%20Política%20De%20Seguridad%20Y%20Salud%20En%20El%20Trabajo%20-%20Politica%20de%20Higiene%20y%20Seguridad%20en.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/PolíticaDePrevenciónAlConsumoDeAlcohol-TabacoYDrogas-SeguridadYSaludEnElTrabajo-HigieneySeguridad.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -216,7 +216,7 @@
                                     <td class="table-action">
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
-                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/Política%20De%20Prevención%20Al%20Consumo%20De%20Alcohol,%20Tabaco%20Y%20Drogas%20-%20Política%20De%20Seguridad%20Y%20Salud%20En%20El%20Trabajo%20-%20Politica%20de%20Higiene%20y%20Seguridad%20en.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Procedimientos/PolíticaDePrevenciónAlConsumoDeAlcohol-TabacoYDrogas-SeguridadYSaludEnElTrabajo-HigieneySeguridad.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
                                     </td>
                                 </tr>
                                 <tr>

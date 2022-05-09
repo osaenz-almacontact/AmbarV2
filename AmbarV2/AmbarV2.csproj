@@ -151,13 +151,11 @@
     <Content Include="Content\Images\DashboardSCC\Personal4.jpg" />
     <Content Include="Content\Images\Empresa\Brasile.jpg" />
     <Content Include="Content\Images\Empresa\Comercial\EsctructuraComercial.JPG" />
-    <Content Include="Content\Images\Empresa\Guido-Fabbri_Colombia_500x500.png" />
     <Content Include="Content\Images\Empresa\ImgOperaciones\Claro.JPG" />
     <Content Include="Content\Images\Empresa\ImgOrganigramas\OrganigramaGeneral.JPG" />
     <Content Include="Content\Images\Empresa\ImgTI\OrganigramaTI.JPG" />
     <Content Include="Content\Images\Empresa\mondo-b.jpg" />
     <Content Include="Content\Images\Empresa\Mondo_900x600_ES.jpg" />
-    <Content Include="Content\Images\Empresa\Oscar-Estrada-Arevalo_Colombia.jpg" />
     <Content Include="Content\Images\Empresa\Renzetti_500x500.jpg" />
     <Content Include="Content\Images\Empresa\Romania.jpg" />
     <Content Include="Content\Images\Empresa\sede-contact.jpg" />
@@ -953,7 +951,7 @@
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Manual Del Sistema De Gestión De Seguridad Y Salud En El Trabajo.pdf" />
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Organigrama V2 - 8 Febrero 2022_.pdf" />
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Plan De Emergencia Almacontact.pdf" />
-    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Política De Prevención Al Consumo De Alcohol, Tabaco Y Drogas - Política De Seguridad Y Salud En El Trabajo - Politica de Higiene y Seguridad en.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PolíticaDePrevenciónAlConsumoDeAlcohol-TabacoYDrogas-SeguridadYSaludEnElTrabajo-HigieneySeguridad.pdf" />
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO CONTRATACIÓN.pdf" />
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\PROCEDIMIENTO DE SELECCIÓN.pdf" />
     <Content Include="Content\Documentacion\SGC\GestionHumana\Procedimientos\Procedimiento Gestión Del Cambio.pdf" />
