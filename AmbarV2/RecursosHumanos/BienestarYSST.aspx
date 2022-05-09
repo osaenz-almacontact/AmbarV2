@@ -13,10 +13,10 @@
                     <div class="col-md-7">
                         <div class="left-content">
                             <div>
-                                <p>
+                                <p style="text-align: justify">
                                     En esta compañía confiamos en la excelencia de nuestro recurso humano para lograr juntos los objetivos y garantizar la satisfacción de nuestros clientes. Estamos conscientes de que las personas son nuestro principal activo y la clave de nuestro éxito.
                                 </p>
-                                <p>
+                                <p style="text-align: justify">
                                     Todos nuestros trabajadores se caracterizan por su cordialidad, compromiso y por el apoyo mutuo entre personas y áreas. Nuestro ritmo de trabajo es estimulante, y siempre estamos en construcción conjunta con nuestra gente de estrategias y formas de vincular nuestro objetivo de negocio con los propósitos de nuestro personal.
                                 </p>
                             </div>

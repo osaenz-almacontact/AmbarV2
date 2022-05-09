@@ -17,13 +17,13 @@
                     <div class="col-md-8">
                         <div class="left-content">
                             <div>
-                                <p>
+                                <p style="text-align: justify">
                                     El área de Reclutamiento, Selección y Contratación siempre piensa en la innovación en los procesos y el trabajo de forma diferente a lo normal, ya que buscamos que cada proceso sea rápido y efectivo. La pasión en esta área se enfoca en pensar que es mejor para nuestro cliente, ser íntegros y empáticos para así identificar y capturar las mejoras continuas y aplicar un cambio diferencial a los procesos que manejamos. Una de las características que más nos resalta en esta área es ser abiertos y libres, debido a que confiamos en el potencial de nuestro equipo de trabajo.
                                 </p>
                             </div>
                             <div style="margin-top: 8%">
                                 <h3 style="color: #12679B">OBJETIVO</h3>
-                                <p>
+                                <p style="text-align: justify">
                                     Buscamos incrementar la satisfacción del cliente, mediante procesos de mejora continua. Está pensada para que la organización pueda garantizar su capacidad de ofrecer productos y servicios que cumplan con las exigencias de sus clientes.
                                 </p>
                             </div>

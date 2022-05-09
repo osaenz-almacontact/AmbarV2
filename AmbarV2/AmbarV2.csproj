@@ -62,6 +62,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
@@ -318,6 +319,7 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Autenticacion\LDAPAutenticador.cs" />
     <Compile Include="ClimaYLiderazgo\ClimaYLiderazgo.aspx.cs">
       <DependentUpon>ClimaYLiderazgo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -727,7 +729,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Documentacion\SGC\GestionHumana\Formatos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\src\fonts\fa-brands-400.eot" />
@@ -983,6 +984,85 @@
     <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO RETROALIMENTACION CALIDAD.pdf" />
     <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO ROLE PLAY.pdf" />
     <Content Include="Content\Documentacion\SGC\Calidad\Formatos\FORMATO VIERNES DE RETO.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\ACEPTACIÓN DE OFERTA DE TRABAJO.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\AUTORIZACION PARA CONSIGNACION DEL PAGO DE NOMINA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\AUTORIZACIÓN USO DE IMAGEN.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\CARTA ENTREGA DE USUARIOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\CARTA OFERTA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\DOCUMENTOS DE INGRESO A LA COMPAÑIA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\ENTREGA DE CARNÉ.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\ENTREGA Y CONDICIONES  DE USO ELEMENTOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Acta de entrega de Roles y Responsabilidades.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\FORMATO DE HOJA DE VIDA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\PRESTAMO DE CARPETAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\EV DESEMPEÑO 2021 - FORMATO.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Agendamiento Inicio Cargo - Indv.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Informe Intervención.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Registro Asistencia.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\AUTORIZACIÓN DEDUCCIÓN DE NÓMINA.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\FORMATO UNICO DE SOLICITUD DÍAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\REGISTRO REPORTE HORAS EXTRAS.xlsx" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\REPORTE NOVEDADES DE NOMINA.xlsx" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\FORMATO COMPROMISO DE MEJORAMIENTO.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato de Paz y Salvo de Retiro unico.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\BASE DE DATOS INGRESO A FORMACIÓN.xlsx" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\BASE DE DATOS RECLUTAMIENTO - CLIENTE.xlsx" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Entrevista Selección y Valoración en Procesos Internos 2.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato Entrevista Selección.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\FORMATO MANUAL DE FUNCIONES.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Acta De Compromisos Recomendación y o Restricción Laboral.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Entrega Y Uso De Elementos De Protección Personal.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato de Acta de Reunión %28Revisión de Politicas%29.pdf" />
+    <Content Include="Content\Documentacion\SGC\GestionHumana\Formatos\Formato De Quejas O Sugerencias Ante El Comité De Convivencia Laboral.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Caracterización Tecnología .pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Administración de Contratos.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Desarrollo .pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Incidentes Tecnológicos.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Inventario de Activos Tecnológicos.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Mantenimiento Preventivo.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Seguimiento y Monitoreo.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Procedimientos\Procedimiento Solicitudes Tecnológicos.pdf" />
+    <Content Include="Content\Documentacion\SGC\Tecnologia\Formatos\Acta de Herramientas.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Compras\EVALUACIÓN DE PROVEEDORES .pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Compras\FORMATO ACTA COMITE DE COMPRAS .pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Compras\FORMATO OC.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Compras\FORMATO SOLICITUD DE COMPRA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Compras\REGISTRO DE PROVEEDORES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Compras\CARACTERIZACION COMPRAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Compras\PROCEDIMIENTO DE COMPRAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Compras\PROCEDIMIENTO EVALUACIÓN DE PROVEEDORES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\CARACTERIZACION CICLO CONTABLE.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO CAUSACION PAGOS Y CONCILIACION.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO CICLO CONTABLE .pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO DIFERENCIA EN CAMBIO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO FACTURACION A CLIENTES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO FACTURACION A PROVEEDORES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO LEGALIZACIONES .pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Contabilidad\PROCEDIMIENTO PROVISIONES Y REVERSIONES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Contabilidad\CONCILIACION BANCARIA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Contabilidad\CONTROL CAUSACIONES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Infraestructura\ASPECTOS GENERALES DE SEGURIDAD FÍSICA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Infraestructura\CARACTERIZACION INFRAESTRUCTURA Y SEGURIDAD FISICA %281%29.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Infraestructura\MANUAL DE POLITICAS DE ACCESO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Infraestructura\PROCEDIMIENTO MANTENIMIENTO INFRAESTRUCTURA FÍSICA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Infraestructura\PROCEDIMIENTOS DE SEGURIDAD FÍSICA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\ENTREGA DE TARJETAS DE PROXIMIDAD DE USO INTERNO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\LISTA DE CHEQUEO DE LIMPIEZA Y DESINFECCIÓN DE BAÑOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\LISTA DE CHEQUEO DE LIMPIEZA Y DESINFECCIÓN DE CAFETERIAS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\REGISTRO DE INGRESOS AL DATA CENTER.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\REGISTRO DE VISITANTES.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\REVISION DE INFRAESTRUCTURA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\SEGUIMIENTO DE NOVEDADES DE INFRAESTRUCTURA Y SEGURIDAD FÍSICA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Infraestructura\SOLICITUD DE INGRESO.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\CARCATERIZACION TESORERIA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\PROCEDIMIENTO ANTICIPOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\PROCEDIMIENTO CAJA MENOR.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\PROCEDIMIENTO CARTERA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\PROCEDIMIENTO DE PAGOS.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Procedimientos\Tesoreria\PROCEDIMIENTO TESORERIA.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Tesoreria\Arqueo de Caja.pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Tesoreria\Formato Reembolso de Gastos .pdf" />
+    <Content Include="Content\Documentacion\SGC\Administrativo\Formatos\Tesoreria\Formato Solicitud - Reembolso de Caja Menor.pdf" />
     <None Include="packages.config" />
     <Content Include="Scripts\js\app.js.LICENSE" />
     <Content Include="Scripts\js\app.js.map" />

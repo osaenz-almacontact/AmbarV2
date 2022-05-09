@@ -65,14 +65,14 @@
                             </a>
                             <ul id="forms" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/SeleccionYContratacion.aspx">Selección y Contratación</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/BienestarYSST.aspx">Bienestar Y SST</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/BienestarYSST.aspx">Bienestar</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/BienestarYSST.aspx">SGSST</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/InfoAreas/InfoNomina.aspx">Nomina</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Relaciones Laborales</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">COPASSO</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Brigadistas</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" href="#">Organigrama</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/Documentacion/Documentacion.aspx">Documetacion</a></li>
-                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/PoliticaAmbiental.aspx">Política ambiental</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" href="Novedades/IngresoDeNovedades.aspx">Novedades</a></li>
                                 <li class="sidebar-item"><a class="sidebar-link" runat="server" id="LiAprovacionDeNovedades" href="Novedades/AprovacionDeNovedades.aspx">Aprovacion Novedades</a></li>
                             </ul>
@@ -98,9 +98,13 @@
                         </li>
 
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="/AlmaAmbiental/AlmaAmbiental.aspx">
+                            <a href="#AlmaAmbiental" data-toggle="collapse" class="sidebar-link" >
                                 <i class="align-middle" data-feather="feather"></i><span class="align-middle">Alma Ambiental</span>
                             </a>
+                            <ul id="AlmaAmbiental" class="sidebar-dropdown list-unstyled collapse " data-parent="#sidebar">
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="/AlmaAmbiental/AlmaAmbiental.aspx">Eventos</a></li>
+                                <li class="sidebar-item"><a class="sidebar-link" runat="server" href="~/RecursosHumanos/PoliticaAmbiental.aspx">Política ambiental</a></li>
+                            </ul>
                         </li>
 
                         <li class="sidebar-item">

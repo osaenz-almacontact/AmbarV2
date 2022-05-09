@@ -236,9 +236,9 @@
                 </div>
                 <div class="tab-pane" id="TabFormatos" role="tabpanel" aria-labelledby="profile-tab">
 
-                    <%--<div class="card">
+                    <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">FORMATOS Y REGISTROS WORKFORCE</h5>
+                            <h5 class="card-title">FORMATOS GESTIÓN HUMANA</h5>
                         </div>
                         <table class="table table-bordered">
                             <thead>
@@ -251,29 +251,259 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Formato Entrega de Proyecto</td>
+                                    <td>Documentos de ingreso a la compañía</td>
                                     <td class="text-center">1</td>
-                                    <td class="d-none d-md-table-cell">12/10/2021</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
                                     <td class="table-action">
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
-                                        <a href="../Content/Documentacion/SGC/Comercial/Formatos/Formato%20Entrega%20de%20Proyecto.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/DOCUMENTOS%20DE%20INGRESO%20A%20LA%20COMPAÑIA.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>Resumen Proyecto</td>
+                                    <td>Carta oferta</td>
                                     <td class="text-center">1</td>
-                                    <td class="d-none d-md-table-cell">12/10/2021</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
                                     <td class="table-action">
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
                                         <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
-                                        <a href="../Content/Documentacion/SGC/Comercial/Formatos/RESUMEN%20PROYECTO.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/CARTA%20OFERTA.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aceptación de oferta de Trabajo</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/ACEPTACIÓN%20DE%20OFERTA%20DE%20TRABAJO.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Autorización para Consignación de pago nomina</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/AUTORIZACION%20PARA%20CONSIGNACION%20DEL%20PAGO%20DE%20NOMINA.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Autorización Uso de Imagen</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/AUTORIZACIÓN%20USO%20DE%20IMAGEN.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Carta Entrega de Usuarios</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/CARTA%20ENTREGA%20DE%20USUARIOS.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Entrega de Carnet</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/ENTREGA%20DE%20CARNÉ.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Entrega y Condiciones de Uso de elementos</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/ENTREGA%20Y%20CONDICIONES%20%20DE%20USO%20ELEMENTOS.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Hoja de Vida</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">15/10/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/FORMATO%20DE%20HOJA%20DE%20VIDA.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ev Desempeño 2021 - Formato</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">16/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/EV%20DESEMPEÑO%202021%20-%20FORMATO.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Agendamiento Inicio Cargo - Indv</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">2/03/2022</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20Agendamiento%20Inicio%20Cargo%20-%20Indv.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Informe Intervención</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">2/03/2022</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20Informe%20Intervención.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Registro Asistencia</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">29/09/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20Registro%20Asistencia.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Autorización de Descuento</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">12/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/AUTORIZACIÓN%20DEDUCCIÓN%20DE%20NÓMINA.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Único de Solicitud de días</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">13/01/2022</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/FORMATO%20UNICO%20DE%20SOLICITUD%20DÍAS.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Compromiso de Mejoramiento</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">12/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/FORMATO%20COMPROMISO%20DE%20MEJORAMIENTO.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de Paz y Salvo de Retiro único</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">12/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20de%20Paz%20y%20Salvo%20de%20Retiro%20unico.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Base de datos Ingreso a Formación</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">24/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/BASE%20DE%20DATOS%20INGRESO%20A%20FORMACIÓN.xlsx" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Base de datos reclutamiento - Cliente</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">24/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/BASE%20DE%20DATOS%20RECLUTAMIENTO%20-%20CLIENTE.xlsx" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Entrevista Selección y Valoración en Procesos Internos</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">24/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20Entrevista%20Selección%20y%20Valoración%20en%20Procesos%20Internos%202.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato Entrevista Selección</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">24/11/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20Entrevista%20Selección.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Acta De Compromisos Recomendación y/o Restricción Laboral</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">29/09/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Acta%20De%20Compromisos%20Recomendación%20y%20o%20Restricción%20Laboral.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Entrega Y Uso De Elementos De Protección Personal</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">29/09/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Entrega%20Y%20Uso%20De%20Elementos%20De%20Protección%20Personal.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato de Acta de Reunión (Revisión de Políticas)</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">29/09/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20de%20Acta%20de%20Reunión%20(Revisión%20de%20Politicas).pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Formato De Quejas O Sugerencias Ante El Comité De Convivencia Laboral</td>
+                                    <td class="text-center">1</td>
+                                    <td class="d-none d-md-table-cell">29/09/2021</td>
+                                    <td class="table-action">
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="edit-2"></i></a>
+                                        <a href="#" style="display:none"><i class="align-middle" data-feather="trash"></i></a>
+                                        <a href="../Content/Documentacion/SGC/GestionHumana/Formatos/Formato%20De%20Quejas%20O%20Sugerencias%20Ante%20El%20Comité%20De%20Convivencia%20Laboral.pdf" target="_blank"><i class="align-middle" data-feather="download"></i></a>
                                     </td>
                                 </tr>
                                                               
                             </tbody>
                         </table>
-                    </div>--%>
+                    </div>
 
                 </div>
             </div>
